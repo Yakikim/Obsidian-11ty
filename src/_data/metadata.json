@@ -1,0 +1,24 @@
+{
+  "title": "Yaki Kimhi's Site",
+  "header": "Yaki Kimhi's Site",
+  "url": "https://yakikim.github.io/",
+  "language": "iw",
+  "cssclasses": "rtl",
+  "description": "Docs, Guides and specs",
+  "feed": {
+    "subtitle": "All about my special things I want to share with the world",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://example.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://example.com/feed/feed.json"
+  },
+    "author": {
+    "name": "Yaki Kimhi",
+    "email": "Yakikim@gmail.com",
+	"url": "/about/"
+  }
+
+}

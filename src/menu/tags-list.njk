@@ -1,0 +1,13 @@
+---
+permalink: /tags/
+layout: layouts/home.njk
+header: Tag List
+eleventyNavigation:
+  key: All Tags
+  order: 3
+---
+
+{% for tag in collections.tagList %}
+  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+{% endfor %}

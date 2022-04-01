@@ -1,0 +1,37 @@
+
+
+<ul class="post-list">
+  {% for notes in noteslist | reverse %}
+    <li class="post-list__item">
+      <div>
+        <div class="post-list__meta">
+          <time datetime="{{ notes.date | htmlDateString }}">
+            {{ notes.date | readableDate }}
+          </time>
+          <span> | </span>
+          <!-- <span>"{{ post.date | htmlDateString }}" read</span> -->
+         <span class="post-list__tags">
+          {% for tag in notes.data.tags %}
+            {%- if collections.tagList.indexOf(tag) != -1 -%}
+              {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+            {%- endif -%}
+          {% endfor %}
+        </span>
+		</div>
+
+       
+      </div>
+
+      <h3 class="post-list__title">
+        <a  href="{{ notes.url }}">{{ notes.data.title }}</a>
+      </h3>
+
+
+	 <p class="post-list__excerpt">{{ notes.templateContent | excerpt | safe  }}</p> 
+
+
+      <a class="post-list__read-more" href="{{ notes.url }}">read article</a>
+    </li>
+  {% endfor %}
+</ul>

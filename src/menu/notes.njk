@@ -1,0 +1,24 @@
+---
+cssclasses: ltr
+draft: false
+permalink: /notes/
+layout: layouts/notes
+eleventyNavigation:
+  key: Notes
+  order: 2
+---
+<h1>All Notes</h1>
+<!--
+
+{% for tag in collections.tagList %}
+  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+{% endfor %}
+
+-->
+{% set noteslist = collections.notes %}
+{% include "componnents/noteslist.njk" %}
+
+
+
+

@@ -1,0 +1,22 @@
+---
+cssclasses: rtl
+draft: false
+layout: layouts/notes
+permalink: /notes/{{ page.fileSlug }}/
+type: Document
+---
+
+{{ content | safe }}
+
+ <aside class="post__aside">
+    <div class="post__tags" >
+      {% for tag in tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+	  
+
+{% include "componnents/backlinks.njk" %} 
+   
+  </aside>

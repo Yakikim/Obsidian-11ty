@@ -1,0 +1,27 @@
+{
+  "name": "hash-string",
+  "version": "1.0.0",
+  "description": "A string hashing function based on Daniel J. Bernstein's popular 'times 33' hash algorithm.",
+  "main": "build/hash-string.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MatthewBarker/hash-string"
+  },
+  "keywords": [
+    "hash",
+    "string",
+    "algorithm"
+  ],
+  "author": "Matt Barker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthewBarker/hash-string/issues"
+  },
+  "homepage": "https://github.com/MatthewBarker/hash-string",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-umd": "^0.1.3"
+  }
+}
