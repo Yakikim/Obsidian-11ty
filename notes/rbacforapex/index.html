@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href=/notes/rbacforapex/>
+	
+	 <title>Rbacforapex</title>
+	 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: "forest"
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link href="/css/styles/style.css" rel="stylesheet">
+<link href="/css/styles/custom-style.css " rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	 
+	 
+
+    <meta name="description" content="Docs, Guides and specs">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Yaki Kimhi&#39;s Site">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Yaki Kimhi&#39;s Site">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+    <title>
+      Rbacforapex
+      
+         | 
+      
+    </title>
+
+    <link rel="icon" type= “image/x-icon” href="/images/favicon.ico">
+
+    <meta property="og:title" content="Rbacforapex">
+    <meta property="og:site_name" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="undefined/notes/rbacforapex/"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+    
+
+
+    
+      
+    
+    
+
+
+
+</head>
+  <body  dir=rtl >
+    <header class="header" style="direction: ltr">
+        <div class="header__content">
+      <h1 class="site-title"><a href="/">Yaki Kimhi&#39;s Site</a></h1>
+
+
+   <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav-item"><a href="/archive/">Archive</a></li>
+        <li class="nav-item"><a href="/dafyomi/">Daf-Yomi</a></li>
+        <li class="nav-item"><a href="/notes/">Notes</a></li>
+        <li class="nav-item"><a href="/tags/">All Tags</a></li>
+      </ul>
+   </nav>
+        </div>
+    </header>
+
+    <main>
+	<div dir=rtl >
+	
+       <h1 >  </h1>
+
+</div>
+
+	  
+      
+
+
+
+<article class="post" dir=rtl>
+  <header   class="post__header">
+    <h1>Rbacforapex</h1>
+    <div class="post__details">
+      <time datetime="2022-04-01">
+        01 Apr 2022
+      </time>
+      <span> | </span>
+     <span>2 min read</span>
+	</div>
+  </header>
+
+  <main class="post__content">
+    
+<p>Week Of: <a class="internal-link" href="/notes/2021-12-12">2021-12-12</a> <a class="internal-link" href="/notes/2021-12-13">2021-12-13</a></p>
+<h1 id="סיכום-פגישה-בנושא-rbac-for-apex">סיכום פגישה בנושא <a class="internal-link" href="/notes/rbac">RBAC</a> for APEX</h1>
+<p><a class="internal-link" href="/notes/home">HOME</a>/<a class="internal-link" href="/notes/open-university">Open University</a>/<a class="internal-link" href="/notes/memos">Memos</a></p>
+<h2 id="רקע">רקע</h2>
+<p>ישיבה זו היתה המשך לישיבה קודמת שנערכה בתאריך <a class="internal-link" href="/notes/2021-12-07">2021-12-07</a> . בצמד הישיבות דנו במגוון נושאים שהיה צורך להבהירם ולדון בהם לאור הקמת הסביבה החדשה - סביבת האפליקציה של APEX. הישיבות עסקו בפן הטכני והמנהלי של ניהול הרשאות הגישה לאפליקציות בסביבה המוקמת</p>
+<h3 id="אופן-אספקת-השירותים-ממערכת-rbac">אופן אספקת השירותים ממערכת RBAC</h3>
+<p>כיום, הלוגיקה לבדיקת ההרשאות שבשימוש ה-FORMS ואפליקציות קיימות הנעזרות במערכת <a class="internal-link" href="/notes/rbac">RBAC</a> “משוכפל” בקוד PL-SQL על השרת TAMI. חלק מאפליקציות ה-WEB משתמשות בשירות SOAP שנכתב וגם הוא מבצע את בדיקת הגישה. לאור החשש מהבדלים בין הלוגיקה הקיימת לבין הלוגיקה שבשירות ה-SOAP, הומלץ ע”י נחשון לייצא את הלוגיקה הקייימת על שרת ה-TAMI כשירות - ORDS. ### שיטת ההרשאות בסביבת ה-APEX החדשה סוגיות שנידונו: 1. תהליך הקמת אפליקציה וניהול ההרשאות 2. ניהול המשאבים במערכת הRBAC 3. שימוש באפשרות ה”רכיבים” (Sub-Resource) לטובת מהירות הגדרת אפליקציה חדשה וכן ריכוז חלק מן המערכות תחת משאב כללי, לשם הפשטה של תהליך ההרשאות.<br />
+4. האם דרוש שינוי בתהליך ה Deployment<br />
+5. Naming Convention וטבלת ההמרה המרכזת שבין שם המערכת ב-RBAC לבין האפליקציה ב-APEX<br />
+6. האם יש להבדיל בין תהליך ההרשאות באפליקציות רוויות-קוד לבין אפליקציות מעוטות-קוד. 7. אילו שירותים נדרש לכתוב ובאיזו סכמה על שרת ה-TAMI</p>
+<h2 id="משתתפים">משתתפים</h2>
+<ul>
+<li>משולם יולזרי</li>
+<li>נחשון גבעוני</li>
+<li>שגיב ברהום</li>
+<li>יקי קמחי</li>
+</ul>
+<h2 id="מסקנות-ופעולות">מסקנות ופעולות</h2>
+<ul>
+<li>צריכת השירותים בשכבת אפליקציית ה-APEX תיעשה, באמצעות פרוצדורה פנימית. (לצורך החלפה פשוטה של השירות בשירות REST גנרי עתידי שייכתב ויחליף את שירות ה-ORDS באופן שיהיה שקוף למשתמשים ולמפתחים)</li>
+<li>לא ינוהלו בקרות הרשאות OAuth2 ברמת הצרכן הסופי, אלא ברמת ה-Instance. כלומר, יוקם Client גנרי אחד שישרת את כל מי שיגש ולא יהיה שימוש ב-Client של האפליקציה ב-APEX המבקשת את השירות.</li>
+<li>שיטת ההרשאות לא תשתנה ותמשיך לייצג עולמות מוצר (תוכן) כמשאבים במערכת ה-RBAC . זאת לאור ההנחה שניהול ההרשאות יהיה בידי מי שמכיר את כלל המערכות, התהליכים והישויות והוא מנהל המוצרהמערכות.</li>
+<li>תוקם טבלת המרה בין ה-Application_id של ה-APEX לבין שם המשאב של ה-RBAC וייעשה בה שימוש בסביבת האפליקציה על אותו העיקרון כפי שנעשה כיום בסביבת ה-DB.</li>
+<li>שמות המשאבים יהיו בשלב זה בתוספת APEX אך במדה ויוחלט להשתמש בשימוש חוצה פלטפורמות, תוסר תחילית ה-APEX ויעודכן במקביל טבלת ההמרה.</li>
+<li>ההעברה של הגדרת ההרשאות בין הסביבות תיעשה כפי שהיא כיום ועל שרת ה-TAMI. בשלב זה לא תיכתב מערכת שתבצע את ההעברה. ### Action Items<br />
+באחריות שגיב: תוקם סכמה (בשלב ראשון ב-DEVA) שתיקרא REST_AUTH. לסכמה הזו יינתן הרשאה למארז AUTH_PKG.CHECK_ACCESS</li>
+</ul>
+<p>באחריות יקי: פתיחת הסכמה ל-ORDS והקמת השירות שייקרא access ויהיה מבוסס על הפונקציה Check_access איפיון וכתיבת התהליך של צריכת השירות שייעשה באמצעות פרוצדורה על ה-DB של האפליקציה שיבצע את הקריאה לשירות - access</p>
+<p>#memo #op/memo</p>
+
+
+ <aside class="post__aside">
+    <div class="post__tags" >
+      
+    </div>
+	  
+
+<hr>
+<p class="backlinks-title larger">Backlinks:</p>
+
+<p class="backlinks-default">No backlinks found.</p>
+ 
+   
+  </aside>
+
+  </main>
+
+ 
+
+</article>
+	  
+    </main>
+
+    <footer>
+	
+	</footer>
+
+    <!-- Current page: /notes/rbacforapex/ -->
+
+  </body>
+</html>
