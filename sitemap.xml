@@ -67,16 +67,6 @@
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/another-note/</loc>
-    <lastmod>2022-04-05</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yakikim.github.io/tags/second-note/</loc>
-    <lastmod>2022-04-05</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yakikim.github.io/tags/second-tag/</loc>
     <lastmod>2022-04-05</lastmod>
   </url>
@@ -93,6 +83,16 @@
   
   <url>
     <loc>https://yakikim.github.io/tags/number-2/</loc>
+    <lastmod>2022-04-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/another-note/</loc>
+    <lastmod>2022-04-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/second-note/</loc>
     <lastmod>2022-04-05</lastmod>
   </url>
   
