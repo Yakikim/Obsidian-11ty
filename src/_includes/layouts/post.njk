@@ -14,19 +14,21 @@ permalink: /posts/{{ page.fileSlug }}/
       <span> | </span>
      <span>{{ content | readingTime }} read</span>
 	</div>
+
   </header>
-
-  <main class="post__content">
-    {{ content | safe }}
-  </main>
-
-  <aside class="post__aside">
-    <div class="post__tags">
+	<div class="post__tags">
       {% for tag in tags | filterTagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
         <a href="{{ tagUrl | url }}">#{{ tag }}</a>
       {% endfor %}
     </div>
+	
+  <main class="post__content">
+    {{ content | safe }}
+  </main>
+
+  <aside class="post__aside">
+
 
     <nav class="post__pagination">
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
