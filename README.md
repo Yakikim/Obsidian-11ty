@@ -4,6 +4,21 @@ This repository if platform for enabling your Obsidian's vaults (or just part of
 
 ## How to publish the site using Github pages
 
+
+## Running locally
+
+### Install the modules
+
+```
+npm install
+```
+
+### Compile and run
+
+```
+npm run start
+```
+
 ## How to publish the site using Docker
 clone the repository
 ### Docker build 
