@@ -42,6 +42,11 @@
   </url>
   
   <url>
+    <loc>https://yakikim.github.io/about/</loc>
+    <lastmod>2022-04-06</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yakikim.github.io/archive/</loc>
     <lastmod>2022-04-06</lastmod>
   </url>
@@ -62,6 +67,26 @@
   </url>
   
   <url>
+    <loc>https://yakikim.github.io/tags/another-tag/</loc>
+    <lastmod>2022-04-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/second-tag/</loc>
+    <lastmod>2022-04-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/number-2/</loc>
+    <lastmod>2022-04-06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/posts-with-two-tags/</loc>
+    <lastmod>2022-04-06</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yakikim.github.io/tags/notes/</loc>
     <lastmod>2022-04-06</lastmod>
   </url>
@@ -73,26 +98,6 @@
   
   <url>
     <loc>https://yakikim.github.io/tags/second-note/</loc>
-    <lastmod>2022-04-06</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yakikim.github.io/tags/second-tag/</loc>
-    <lastmod>2022-04-06</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yakikim.github.io/tags/posts-with-two-tags/</loc>
-    <lastmod>2022-04-06</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yakikim.github.io/tags/another-tag/</loc>
-    <lastmod>2022-04-06</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yakikim.github.io/tags/number-2/</loc>
     <lastmod>2022-04-06</lastmod>
   </url>
 </urlset>

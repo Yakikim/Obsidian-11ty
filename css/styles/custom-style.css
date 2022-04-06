@@ -224,7 +224,6 @@ body code {
 body pre {
   font-size: 14px;
   line-height: 1.375;
-  white-space: pre;
   word-spacing: normal;
   word-break: normal;
   -moz-tab-size: 2;
@@ -938,7 +937,7 @@ mark {
 }
 
 .post > * + * {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .post__details {
@@ -955,12 +954,13 @@ mark {
 }
 
 .post__aside {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .post__tags {
   opacity: 0.8;
   font-size: var(--text-sm);
+  margin-top: 10px;
 }
 
 .post__tags * + * {
@@ -1002,7 +1002,6 @@ pre[class*=language-] {
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
-  white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
@@ -1228,6 +1227,63 @@ p {
   --accent: #0074d9;
   --background: #fffffe;
   --color: rgb(41, 41, 41);
+}
+
+.note_header {
+  max-width: 55em;
+  border-bottom: none;
+}
+
+.note_details {
+  opacity: 0.6;
+  font-size: var(--text-sm);
+}
+
+.note_details > * + * {
+  margin-left: 0.5rem;
+}
+
+.note_content {
+  word-wrap: break-word;
+  padding-top: 3rem;
+}
+
+.note_aside {
+  margin-top: 0rem;
+}
+
+.note_tags {
+  opacity: 0.8;
+  font-size: var(--text-sm);
+}
+
+.note_tags * + * {
+  margin-left: 0.5rem;
+}
+
+.note_section {
+  margin-top: 2rem;
+}
+
+.tags-title {
+  border-bottom: 1px dashed var(--lightgray);
+}
+
+.backlinks-title {
+  border-bottom: 1px dashed var(--lightgray);
+}
+
+#notes-container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas: "section" "side";
+}
+
+@media (min-width: 700px) {
+  #notes-container {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "section side";
+  }
 }
 
 /*# sourceMappingURL=custom-style.css.map */
