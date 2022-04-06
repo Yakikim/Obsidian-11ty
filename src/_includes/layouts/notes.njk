@@ -7,9 +7,10 @@ layout: layouts/base.njk
 
 
 <article class="post" dir={{ cssclasses or metadate.cssclasses }}>
-  <header   class="post__header">
+ 
+ <header class="note_header">
     <h1>{{ title }}</h1>
-    <div class="post__details">
+    <div class="note_details">
       <time datetime="{{ page.date | htmlDateString }}">
         {{ page.date | readableDate }}
       </time>
@@ -17,9 +18,26 @@ layout: layouts/base.njk
      <span>{{ content | readingTime }} read</span>
 	</div>
   </header>
+<main class="note_content">
+<div id="notes-container">
+<section class="note_section">
 
-  <main class="post__content">
-    {{ content | safe }}
+{{ content | safe }}
+</section>
+ <aside class="note_aside">
+	<p class="tags-title">Tags:</p>
+    <div class="note_tags" >
+      {% for tag in tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+	  
+
+{% include "componnents/backlinks.njk" %} 
+   
+  </aside>
+</div>
   </main>
 
  
