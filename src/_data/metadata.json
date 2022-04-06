@@ -18,7 +18,9 @@
     "author": {
     "name": "Yaki Kimhi",
     "email": "Yakikim@gmail.com",
-	"url": "/about/"
+	"twitter": "https://twitter.com/yakikim",
+	"url": "/about/",
+	"about_image": "/css/images/avatar.png"
   }
 
 }

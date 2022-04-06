@@ -3,7 +3,14 @@ layout: layouts/base.njk
 ---
 
 <div class="about">
-  <h1>About {{ name }}</h1>
-  <img src="{{ image | url }}" alt="" class="about__image">
+  <h1>About {{ metadata.author.name }}</h1>
+  <img src="{{ metadata.author.about_image | url }}" alt="" class="about__image">
   {{ content | safe }}
+
+
+</div>
+<div class="about__footer">
+  <a href="{{ metadata.author.email | url }}">Email me!</a>
+  </br>
+  <a href="tel:+1-333-333-4444">+1 (333) 333 4444</a>
 </div>
