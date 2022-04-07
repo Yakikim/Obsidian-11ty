@@ -25,7 +25,7 @@ module.exports = function(eleventyConfig) {
 		.use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
       placement: "after",
-      class: "external-link",
+      class: "md-header-link",
       symbol: "#",
       level: [1,2,3],
     }),
@@ -110,7 +110,7 @@ module.exports = function(eleventyConfig) {
                 if (classIndex < 0) {
                     tokens[idx].attrPush(['class', 'external-link']);
                 } else {
-                    tokens[idx].attrs[classIndex][1] = 'external-link';
+                    tokens[idx].attrs[classIndex][1] = 'md-header-link';
                 }
 
                 return defaultLinkRule(tokens, idx, options, env, self);

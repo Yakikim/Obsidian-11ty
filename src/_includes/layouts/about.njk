@@ -1,16 +1,69 @@
 ---
 layout: layouts/base.njk
 ---
-
+<nav class="about_nav"> 
 <div class="about">
   <h1>About {{ metadata.author.name }}</h1>
-  <img src="{{ metadata.author.about_image | url }}" alt="" class="about__image">
+
   {{ content | safe }}
 
 
 </div>
-<div class="about__footer">
-  <a href="{{ metadata.author.email | url }}">Email me!</a>
-  </br>
-  <a href="tel:+1-333-333-4444">+1 (333) 333 4444</a>
+<div class="about_contact_side">
+  <img src="{{ metadata.author.about_image | url }}" alt="" class="about__image" style="border-radius: 20px;margin-bottom: 3em;max-width: 15em;"> 
+ 
+<ul class="ul_social_links shared_resetList shared_reset channels-links">
+
+ {% if metadata.author.github %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="{{ metadata.author.github | url }}"><span class="ch_link_social_icon">
+{%include "icons/github.njk"%}
+</span> <!-- -->Github</a></li>
+{% endif %}
+
+ {% if metadata.author.slack %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="{{ metadata.author.slack | url }}"><span class="ch_link_social_icon">
+{%include "icons/slack.njk"%}
+</span> <!-- -->Slack</a></li>
+{% endif %}
+
+ {% if metadata.author.twitter %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="{{ metadata.author.twitter | url }}"><span class="ch_link_social_icon">
+{%include "icons/twitter.njk"%}
+</span> <!-- -->Twitter</a></li>
+{% endif %}
+
+ {% if metadata.author.youtube %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="{{ metadata.author.youtube | url }}"><span class="ch_link_social_icon">
+{%include "icons/youtube.njk"%}
+</span> <!-- -->YouTube</a></li>
+{% endif %}
+
+ {% if metadata.author.stackoverflow %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="{{ metadata.author.stackoverflow | url }}"><span class="ch_link_social_icon">
+{%include "icons/stack-overflow.njk"%}
+</span> <!-- -->Stack Overflow</a></li>
+{% endif %}
+
+ {% if metadata.author.rss %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="{{ metadata.author.rss | url }}"><span class="ch_link_social_icon">
+{%include "icons/rss.njk"%}
+</span> <!-- -->Blog RSS</a></li>
+{% endif %}
+
+ {% if metadata.author.email %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="mailto:{{ metadata.author.email | url }}"><span class="ch_link_social_icon">
+  {%include "icons/envelope.njk"%}
+</span> <!-- -->Email Me</a></li>
+{% endif %}
+
+ {% if metadata.author.phone %}
+<li><a class="list_social_link chlist_social_link ch_reset_link shared_fg shared_glink ch_reset_link shared_text" href="https://wa.me/{{ metadata.author.phone | url }}"><span class="ch_link_social_icon">
+  {%include "icons/whatsapp.njk"%}
+</span> <!-- -->Whatsapp</a></li>
+{% endif %}
+
+</ul>
+
+  
 </div>
+</nav>
