@@ -8,7 +8,6 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const implicitFigures = require('markdown-it-image-figures');
-const wikilinks = require('markdown-it-wikilinks');
 const matter = require('gray-matter');
 
 module.exports = function(eleventyConfig) {
@@ -228,24 +227,6 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
-/*
-  function filterNotesTagList(ntags) {
-    return (ntags || []).filter(tag => ["all", "nav","john", "John", "post", "APEX"].indexOf(tag) === -1);
-  }
-
-//for notes tags
-  eleventyConfig.addFilter("filterNotesTagList", filterNotesTagList)
-
-  // Create an array of all tags
-  eleventyConfig.addCollection("NotestagList", function(collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => tagSet.add(tag));
-    });
-
-    return filterNotesTagList([...tagSet]);
-  });
-  */
 
 
   // Override Browsersync defaults (used only with --serve)
