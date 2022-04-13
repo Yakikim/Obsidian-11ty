@@ -157,10 +157,7 @@ module.exports = function(eleventyConfig) {
 
   // Alias so just put `layout: post` and no need to write the full path `layout: layouts/post.njk` 
  eleventyConfig.addLayoutAlias("post", "layouts/post.njk"); 
- //eleventyConfig.addLayoutAlias("notes", "layouts/notes.njk");
 // Aliases for the personal notes 
- eleventyConfig.addLayoutAlias("dafyomi", "personal/dafyomi.njk");
- eleventyConfig.addLayoutAlias("general_hebrew", "personal/hebrew.njk");
  eleventyConfig.addLayoutAlias("note", "personal/note.njk");
  eleventyConfig.addLayoutAlias("mynote", "personal/note.njk");
  eleventyConfig.addLayoutAlias("hebnote", "personal/hebnote.njk"); // for RTL notes - can be use also for Arabic

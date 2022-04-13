@@ -34,7 +34,9 @@ module.exports = {
         title: data => titleCase(data.title || data.page.fileSlug),
         backlinks: (data) => {
             const notes = data.collections.notes;
-            const currentFileSlug = data.page.filePathStem.replace('/notes/', '');
+			// const posts = data.collections.posts;
+			const regexy = /[\/]+[notes|posts]+[\/]+.+[\/]/i // replace 
+            const currentFileSlug = data.page.filePathStem.replace(regexy, '');
 
             let backlinks = [];
 			let preview ='';
@@ -65,7 +67,8 @@ module.exports = {
                     })
                 }
             }
-
+		
+			
             return backlinks;
         }
     }
