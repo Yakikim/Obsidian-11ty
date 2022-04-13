@@ -8,7 +8,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const implicitFigures = require('markdown-it-image-figures');
-
+const wikilinks = require('markdown-it-wikilinks');
 const matter = require('gray-matter');
 
 module.exports = function(eleventyConfig) {
@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
             html: true,
 			linkify: true
         })
-		
+ // .use( wikilinks({ baseURL: '/yaki/' }))
 		.use(implicitFigures)
 		.use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
@@ -40,7 +40,7 @@ module.exports = function(eleventyConfig) {
                 const parts = match.raw.slice(2,-2).split("|");
                 parts[0] = parts[0].replace(/.(md|markdown)\s?$/i, "");
                 match.text = (parts[1] || parts[0]).trim();
-                match.url = `/notes/${parts[0].trim()}/`;
+                match.url =  `/${parts[0].trim()}/`;
             }
         })
     })
@@ -64,6 +64,10 @@ module.exports = function(eleventyConfig) {
                     return `<pre class="language-${token.info}">${md.render(code)}</pre>`;
                 }
 				if (token.info ==='dataview') {
+                    const code = token.content.trim();
+                    return `<pre class="language-${token.info}" style="visibility: hidden;">${md.render(code)}</pre>`;
+                }
+				if (token.info ==='tasks') {
                     const code = token.content.trim();
                     return `<pre class="language-${token.info}" style="visibility: hidden;">${md.render(code)}</pre>`;
                 }
@@ -122,11 +126,11 @@ module.exports = function(eleventyConfig) {
         return str && str.replace(/\[\[(.*?)\]\]/g, function(match, p1) {
             const [fileName, linkTitle] = p1.split("|");
 
-            let permalink = `/notes/${slugify(fileName)}`;
+            let permalink = `/${slugify(fileName)}`;
             const title = linkTitle ? linkTitle : fileName;
 
             try {
-			const file = fs.readFileSync(`/notes/${fileName}.md`, 'utf8');
+			const file = fs.readFileSync(`/${fileName}.md`, 'utf8');
                 const frontMatter = matter(file);
                 if (frontMatter.data.permalink) {
                     permalink = frontMatter.data.permalink;
@@ -138,39 +142,10 @@ module.exports = function(eleventyConfig) {
             return `<a class="internal-link" href="${permalink}">${title}</a>`;
         });
     })
-
-
-	//replace double brackets for notes:
-const markdownItB = require('markdown-it');
-    const markdownItOptionsB = {
-        html: true,
-        linkify: true
-    };
-    
-    const mdB = markdownItB(markdownItOptionsB)
-    .use(require('markdown-it-footnote'))
-    .use(require('markdown-it-attrs'))
-    .use(function(mdB) {
-        // Recognize Mediawiki links ([[text]])
-        mdB.linkify.add("[[", {
-            validate: /^\s?([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s?\]\]/,
-            normalize: match => {
-                const parts = match.raw.slice(2,-2).split("|");
-                parts[0] = parts[0].replace(/.(md|markdown)\s?$/i, "");
-                match.text = (parts[1] || parts[0]).trim();
-                match.url = `/notes/${parts[0].trim()}/`;
-            }
-        })
-    })
-	
-    eleventyConfig.setLibrary('mdB', mdB);
-	
        
     eleventyConfig.addFilter("markdownify", string => {
         return mdB.render(string)
     })
-
-	
 
 
     eleventyConfig.addTransform('highlight', function(str) {
@@ -188,6 +163,9 @@ const markdownItB = require('markdown-it');
  eleventyConfig.addLayoutAlias("general_hebrew", "personal/hebrew.njk");
  eleventyConfig.addLayoutAlias("note", "personal/note.njk");
  eleventyConfig.addLayoutAlias("mynote", "personal/note.njk");
+ eleventyConfig.addLayoutAlias("hebnote", "personal/hebnote.njk"); // for RTL notes - can be use also for Arabic
+
+ 
  eleventyConfig.addFilter('excerpt', (post) => {
     const content = post.replace(/(<([^>]+)>)/gi, '');
     return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
