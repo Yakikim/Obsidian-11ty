@@ -7,7 +7,15 @@ eleventyNavigation:
   order: 3
 ---
 
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{% endfor %}
+<div class="field is-grouped is-grouped-multiline">
+  {%- for tag in collections.tagList -%}
+    {%- set postsList = collections[ tag ] -%}
+    {%- set listCount = postsList.length -%}
+    {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+
+    {% if listCount %}
+<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }} ({{ listCount }})</a>
+      </a>
+    {% endif %}
+  {%- endfor -%}
+
