@@ -63,10 +63,6 @@ blockquote p {
 }
 
 
-.external-link {
-    padding-right: 10px;
-    position: relative;
-}
 
 div.translusion {
     border-left: 4px solid gray;
@@ -193,9 +189,7 @@ p,
 a[href] {
   color: var(--blue);
 }
-a[href]:visited {
-  color: var(--navy);
-}
+
 main {
   padding: 1rem;
     flex-grow: 1;
@@ -369,10 +363,7 @@ code {
   text-decoration: none;
   line-height: 1.8;
 }
-a[href].post-tag,
-a[href].post-tag:visited {
-  color: inherit;
-}
+
 a[href].post-tag:hover,
 a[href].post-tag:focus {
   background-color: var(--lightgray);
@@ -390,20 +381,3 @@ a[href].post-tag:focus {
   margin: 0;
 }
 
-/* Direct Links / Markdown Headers */
-.direct-link {
-  font-family: sans-serif;
-  text-decoration: none;
-  font-style: normal;
-  margin-left: .1em;
-}
-a[href].direct-link,
-a[href].direct-link:visited {
-  color: transparent;
-}
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
-  color: #aaa;
-}

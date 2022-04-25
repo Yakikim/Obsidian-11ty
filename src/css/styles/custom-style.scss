@@ -95,10 +95,12 @@ blockquote p {
     padding-right: 10px;
     position: relative;
 	font-size: 35%;
+color: rgb(139, 87, 0);
 	}
 .external-link {
     padding-right: 10px;
     position: relative;
+color: rgb(139, 87, 0);
 
 }
 
@@ -420,6 +422,7 @@ a[href].post-tag:focus {
 .direct-link {
   font-family: sans-serif;
   text-decoration: none;
+color: gray;
   font-style: normal;
   margin-left: .1em;
 }
@@ -587,7 +590,7 @@ ul {
 
 b,
 strong {
-  font-weight: 500;
+  font-weight: bolder;
 }
 
 table {
