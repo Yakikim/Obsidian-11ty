@@ -83,10 +83,12 @@ body .direct-link {
   padding-right: 10px;
   position: relative;
   font-size: 35%;
+  color: #8b5700;
 }
 body .external-link {
   padding-right: 10px;
   position: relative;
+  color: #8b5700;
 }
 body div.translusion {
   border-left: 4px solid gray;
@@ -377,6 +379,7 @@ body .warning ol:only-child {
 body .direct-link {
   font-family: sans-serif;
   text-decoration: none;
+  color: gray;
   font-style: normal;
   margin-left: 0.1em;
 }
@@ -543,7 +546,7 @@ ul {
 
 b,
 strong {
-  font-weight: 500;
+  font-weight: bolder;
 }
 
 table {

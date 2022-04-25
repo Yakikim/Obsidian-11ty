@@ -12,12 +12,12 @@
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/posts/firstpost/</loc>
+    <loc>https://yakikim.github.io/firstpost/</loc>
     <lastmod>2018-05-01</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/posts/secondpost/</loc>
+    <loc>https://yakikim.github.io/secondpost/</loc>
     <lastmod>2018-07-04</lastmod>
   </url>
   
@@ -27,12 +27,12 @@
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/posts/thirdpost/</loc>
+    <loc>https://yakikim.github.io/thirdpost/</loc>
     <lastmod>2018-08-24</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/posts/fourthpost/</loc>
+    <loc>https://yakikim.github.io/fourthpost/</loc>
     <lastmod>2018-09-30</lastmod>
   </url>
   
@@ -42,67 +42,87 @@
   </url>
   
   <url>
+    <loc>https://yakikim.github.io/11ty-Images/</loc>
+    <lastmod>2022-04-24</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yakikim.github.io/about/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/archive/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/notes/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/page-list/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/another-tag/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/4th-post/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/second-tag/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/number-2/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/posts-with-two-tags/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/notes/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/another-note/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
   </url>
   
   <url>
     <loc>https://yakikim.github.io/tags/second-note/</loc>
-    <lastmod>2022-04-13</lastmod>
+    <lastmod>2022-04-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/11ty/</loc>
+    <lastmod>2022-04-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/images/</loc>
+    <lastmod>2022-04-25</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yakikim.github.io/tags/obsidian/</loc>
+    <lastmod>2022-04-25</lastmod>
   </url>
 </urlset>

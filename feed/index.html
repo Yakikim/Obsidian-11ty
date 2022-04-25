@@ -5,7 +5,7 @@
 	
 	<link href="https://yakikim.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://yakikim.github.io/"/>
-	<updated>2018-09-30T00:00:00Z</updated>
+	<updated>2022-04-24T00:00:00Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>Yaki Kimhi</name>
@@ -13,37 +13,67 @@
 	</author>
 	
 	<entry>
+		<title>Obsidian-11ty Images</title>
+		<link href="https://yakikim.github.io/11ty-Images/"/>
+		<updated>2022-04-24T00:00:00Z</updated>
+		<id>https://yakikim.github.io/11ty-Images/</id>
+		<content type="html">&lt;h2 id=&quot;how-to-config-your-obsidian-vault&quot; tabindex=&quot;-1&quot;&gt;How to config your obsidian vault &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/11ty-Images/#how-to-config-your-obsidian-vault&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Under &lt;code&gt;Files &amp;amp; Links&lt;/code&gt; define the &lt;code&gt;Default location for new attachments&lt;/code&gt; attribute to be any value &lt;strong&gt;exept&lt;/strong&gt; the &lt;code&gt;Same folder as current file&lt;/code&gt; .  My definition and recomendation:&lt;br /&gt;
+&lt;img src=&quot;https://yakikim.github.io/attch/Pasted%20image%2020220424171759.png&quot; alt=&quot;|90%?my definition&quot; title=&quot;my definition&quot; width=&quot;90%&quot; /&gt;&lt;br /&gt;
+It&#39;s a perfect combination of manage privacy as well as lighting site and publish easily.&lt;/p&gt;
+&lt;h2 id=&quot;mapping-the-attachments-in-.eleventy.js-file&quot; tabindex=&quot;-1&quot;&gt;mapping the attachments in .eleventy.js file &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/11ty-Images/#mapping-the-attachments-in-.eleventy.js-file&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;change the value of the variable &lt;code&gt;publishAttachementsDir&lt;/code&gt; to contain the output directory. for exemple:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; publishAttachementsDir &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;attch&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;for every attachments directory you have to map it to the &lt;code&gt;_site/&amp;lt;publishAttachementsDir&amp;gt;&lt;/code&gt; directory.&lt;br /&gt;
+So below this line you can add as many mapping as needded for your attachments folders you may like to share from your vault to your site.&lt;br /&gt;
+It can be done through:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addPassthroughCopy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;fromDir&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;toDir&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;for example:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addPassthroughCopy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string-property property&quot;&gt;&quot;src/MyObsidian/public/attachments&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;publishAttachementsDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;publish-image-to-the-site&quot; tabindex=&quot;-1&quot;&gt;Publish image to the site &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/11ty-Images/#publish-image-to-the-site&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In your note, you can include your image with the format &lt;code&gt;![alt|width?title](src)&lt;/code&gt; for example:&lt;br /&gt;
+&lt;img src=&quot;https://imgs.developpaper.com/guest/2019/01/logo.png&quot; alt=&quot;My Alt text|200px?This is the image&quot; title=&quot;This is the image&quot; width=&quot;200px&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![My Alt text|200px?This is the image](https://imgs.developpaper.com/guest/2019/01/logo.png)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example from the local files (stayed at &lt;code&gt;src/MyObsidian/public/attachments&lt;/code&gt;):&lt;br /&gt;
+&lt;img src=&quot;https://yakikim.github.io/attch/msedge_0sbOL3eK3s.png&quot; alt=&quot;My Hill sprints |100%?hill sprints graph &quot; title=&quot;hill sprints graph &quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![My Hill sprints |100%?hill sprints graph](msedge_0sbOL3eK3s.png)
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+	</entry>
+	
+	<entry>
 		<title>This Is My Fourth Post.</title>
-		<link href="https://yakikim.github.io/posts/fourthpost/"/>
+		<link href="https://yakikim.github.io/fourthpost/"/>
 		<updated>2018-09-30T00:00:00Z</updated>
-		<id>https://yakikim.github.io/posts/fourthpost/</id>
+		<id>https://yakikim.github.io/fourthpost/</id>
 		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
 &lt;p&gt;Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/posts/fourthpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/fourthpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>This Is My Third Post.</title>
-		<link href="https://yakikim.github.io/posts/thirdpost/"/>
+		<link href="https://yakikim.github.io/thirdpost/"/>
 		<updated>2018-08-24T00:00:00Z</updated>
-		<id>https://yakikim.github.io/posts/thirdpost/</id>
+		<id>https://yakikim.github.io/thirdpost/</id>
 		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// this is a command&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myCommand&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;ins class=&quot;highlight-line highlight-line-add&quot;&gt;	&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; counter &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/ins&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;del class=&quot;highlight-line highlight-line-remove&quot;&gt;	counter&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/del&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Test with a line break above this line.&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Test&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/posts/thirdpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/thirdpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.&lt;/p&gt;
 </content>
 	</entry>
 	
 	<entry>
 		<title>This Is My Second Post.</title>
-		<link href="https://yakikim.github.io/posts/secondpost/"/>
+		<link href="https://yakikim.github.io/secondpost/"/>
 		<updated>2018-07-04T00:00:00Z</updated>
-		<id>https://yakikim.github.io/posts/secondpost/</id>
+		<id>https://yakikim.github.io/secondpost/</id>
 		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/posts/secondpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/secondpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://yakikim.github.io/posts/firstpost/&quot;&gt;First post&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://yakikim.github.io/posts/thirdpost/&quot;&gt;Third post&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.&lt;/p&gt;
@@ -53,12 +83,12 @@
 	
 	<entry>
 		<title>This Is My First Post.</title>
-		<link href="https://yakikim.github.io/posts/firstpost/"/>
+		<link href="https://yakikim.github.io/firstpost/"/>
 		<updated>2018-05-01T00:00:00Z</updated>
-		<id>https://yakikim.github.io/posts/firstpost/</id>
+		<id>https://yakikim.github.io/firstpost/</id>
 		<content type="html">&lt;p&gt;Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.&lt;/p&gt;
 &lt;p&gt;Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.&lt;/p&gt;
-&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/posts/firstpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;section-header&quot; tabindex=&quot;-1&quot;&gt;Section Header &lt;a class=&quot;md-header-link&quot; href=&quot;https://yakikim.github.io/firstpost/#section-header&quot; aria-hidden=&quot;true&quot; target=&quot;_self&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.&lt;/p&gt;
 &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;// this is a command&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;function myCommand() {&lt;/span&gt;&lt;br /&gt;&lt;mark class=&quot;highlight-line highlight-line-active&quot;&gt;	let counter = 0;&lt;/mark&gt;&lt;br /&gt;&lt;mark class=&quot;highlight-line highlight-line-active&quot;&gt;	counter++;&lt;/mark&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;// Test with a line break above this line.&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;highlight-line&quot;&gt;console.log(&#39;Test&#39;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
