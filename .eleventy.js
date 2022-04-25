@@ -13,13 +13,15 @@ const matter = require('gray-matter');
 module.exports = function(eleventyConfig) {
 	
 
+const publishAttachementsDir = 'attch'; //the directory on the published _site where the attachements will be
+
+eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements":`${publishAttachementsDir}`});
 
     let markdownLib = markdownIt({
             breaks: true,
             html: true,
 			linkify: true
         })
- // .use( wikilinks({ baseURL: '/yaki/' }))
 		.use(implicitFigures)
 		.use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
@@ -80,19 +82,39 @@ module.exports = function(eleventyConfig) {
             const defaultImageRule = md.renderer.rules.image || function(tokens, idx, options, env, self) {
                 return self.renderToken(tokens, idx, options, env, self);
             };
-            md.renderer.rules.image = (tokens, idx, options, env, self) => {
-                const imageName = tokens[idx].content;
-                const [fileName, width] = imageName.split("|");
+             md.renderer.rules.image = (tokens, idx, options, env, self) => {
+				const imageName = tokens[idx].content;
+				const [fileNameInc, title] = imageName.split("?");
+				if (title) {
+                    const titleIndex = tokens[idx].attrIndex('title');
+                    const titleAttr = `${title}`;
+                    if (titleIndex < 0) {
+                        tokens[idx].attrPush(['title', titleAttr]);
+                    } else {
+                        tokens[idx].attrs[titleIndex][1] = titleAttr;
+						
+                    }
+					
+                };	
+                const [fileName, width] = fileNameInc.split("|");
                 if (width) {
                     const widthIndex = tokens[idx].attrIndex('width');
-                    const widthAttr = `${width}px`;
+                    const widthAttr = `${width}`;
                     if (widthIndex < 0) {
                         tokens[idx].attrPush(['width', widthAttr]);
                     } else {
                         tokens[idx].attrs[widthIndex][1] = widthAttr;
                     }
-                }
-
+                };
+				const srcAdrr = tokens[idx].attrs[0];//suppose to be the src attribute
+				if ((srcAdrr[0] == 'src') && 
+					!(srcAdrr[1].startsWith('http')) &&
+					!(srcAdrr[1].startsWith('www'))
+					) {
+					const srcIndex = tokens[idx].attrIndex('src');
+					tokens[idx].attrs[srcIndex][1] = `/${publishAttachementsDir}/${srcAdrr[1]}` ;
+				};
+				
                 return defaultImageRule(tokens, idx, options, env, self);
             };
 
