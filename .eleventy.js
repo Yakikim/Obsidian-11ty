@@ -12,10 +12,15 @@ const matter = require('gray-matter');
 
 module.exports = function(eleventyConfig) {
 	
-
 const publishAttachementsDir = 'attch'; //the directory on the published _site where the attachements will be
-
 eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements":`${publishAttachementsDir}`});
+  // Alias so just put `layout: post` and no need to write the full path `layout: layouts/post.njk` 
+ eleventyConfig.addLayoutAlias("post", "layouts/post.njk"); 
+// Aliases for the personal notes 
+ eleventyConfig.addLayoutAlias("note", "personal/note.njk");
+ eleventyConfig.addLayoutAlias("mynote", "personal/note.njk");
+ eleventyConfig.addLayoutAlias("hebnote", "personal/hebnote.njk"); // for RTL notes - can be use also for Arabic
+ eleventyConfig.addLayoutAlias("mypost", "personal/mypost.njk");
 
     let markdownLib = markdownIt({
             breaks: true,
@@ -176,12 +181,6 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
         });
     });
 
-  // Alias so just put `layout: post` and no need to write the full path `layout: layouts/post.njk` 
- eleventyConfig.addLayoutAlias("post", "layouts/post.njk"); 
-// Aliases for the personal notes 
- eleventyConfig.addLayoutAlias("note", "personal/note.njk");
- eleventyConfig.addLayoutAlias("mynote", "personal/note.njk");
- eleventyConfig.addLayoutAlias("hebnote", "personal/hebnote.njk"); // for RTL notes - can be use also for Arabic
 
  
  eleventyConfig.addFilter('excerpt', (post) => {
