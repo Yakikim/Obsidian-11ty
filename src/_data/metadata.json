@@ -1,28 +1,32 @@
 {
-  "title": "Yaki Kimhi's Site",
-  "header": "Yaki Kimhi's Site",
-  "url": "https://yakikim.github.io/",
+  "title": "(<metadata.title>)",
+  "header": "My Blog(<metadata.header>)",
+  "url": "https://<metadata.url>.netlify.app/",
   "language": "iw",
+  "appicon": "/css/images/favicon.ico",
   "cssclasses": "rtl",
   "description": "Docs, Guides and specs",
+  "bgimage": "/attch/banner-bg.jpg",
+  "socialImage": "/attch/vm6AicP4_400x400.jpg",
   "feed": {
     "subtitle": "All about my special things I want to share with the world",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://example.com/"
+    "id": "https://<metadata.id>.netlify.app/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://<metadata.jsonfeed.url>.netlify.app/feed/feed.json"
   },
     "author": {
 	"name": "Yaki Kimhi",
     "email": "Yakikim@gmail.com",
 	"twitter": "https://twitter.com/yakikim",
+	"twitterHandle": "@yakikim",
 	"github": "https://www.github.com/Yakikim",
     "url": "/about/",
-	"phone": "+972508761176",
-	"about_image": "/css/images/vm6AicP4_400x400.jpg"
+	"phone": "+9721234567",
+	"about_image": "/attch/vm6AicP4_400x400.jpg"
   }
 
 }

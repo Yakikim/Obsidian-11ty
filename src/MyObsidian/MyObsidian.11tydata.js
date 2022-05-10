@@ -35,7 +35,7 @@ module.exports = {
         backlinks: (data) => {
             const notes = data.collections.notes;
 			// const posts = data.collections.posts;
-			const regexy = /[\/]+[obsidianVault|menu]+[\/]+.+[\/]/i // replace 
+			const regexy = /[\/]+[MyObsidian|menu]+[\/]+.+[\/]/i // replace 
             const currentFileSlug = data.page.filePathStem.replace(regexy, '');
 
             let backlinks = [];

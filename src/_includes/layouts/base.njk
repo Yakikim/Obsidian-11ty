@@ -74,14 +74,14 @@
    <section id="firstContent">  
    {% if page.url == '/' %} 
   	<div class="banner-container" role="navigation">
-	<img src="{{ metadata.bg-image | url }}" alt="banner">
+	<img src="{{ metadata.bgimage | url }}" alt="banner">
 	  <div class="fadeInUpBig animated home-animated_text">
 		  	{%include "componnents/welcome.njk"%}
       </div>
 	</div>
 	{% else %}
 	<div class="banner-container-other" role="navigation">
-	<img src="{{ metadata.bg-image | url }}" alt="banner">
+	<img src="{{ metadata.bgimage | url }}" alt="banner">
 	</div>
    {% endif %}
 </section>
