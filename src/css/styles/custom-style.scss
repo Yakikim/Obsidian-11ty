@@ -327,6 +327,9 @@ code {
 }
 
 /* Nav */
+.nav > li > a:hover, .nav > li > a:focus {
+border-radius: 5px;
+}
 .nav {
   padding: 0;
   list-style: none;
