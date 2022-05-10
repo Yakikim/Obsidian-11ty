@@ -3,31 +3,62 @@ const slugify = require("@sindresorhus/slugify");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const readingTime = require('eleventy-plugin-reading-time');
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const implicitFigures = require('markdown-it-image-figures');
 const matter = require('gray-matter');
+const codeblocks = require('@code-blocks/eleventy-plugin')
+const tables = require('@code-blocks/tables')
+const cleanCSS = require('clean-css')
+const highlight = require('@code-blocks/prism')
+const searchFilter = require("./src/filters/searchFilter");
 
 module.exports = function(eleventyConfig) {
-	
+
 const publishAttachementsDir = 'attch'; //the directory on the published _site where the attachements will be
-eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements":`${publishAttachementsDir}`});
+
   // Alias so just put `layout: post` and no need to write the full path `layout: layouts/post.njk` 
  eleventyConfig.addLayoutAlias("post", "layouts/post.njk"); 
+ //eleventyConfig.addLayoutAlias("notes", "layouts/notes.njk");
 // Aliases for the personal notes 
  eleventyConfig.addLayoutAlias("note", "personal/note.njk");
  eleventyConfig.addLayoutAlias("mynote", "personal/note.njk");
- eleventyConfig.addLayoutAlias("hebnote", "personal/hebnote.njk"); // for RTL notes - can be use also for Arabic
+ eleventyConfig.addLayoutAlias("hebnote", "personal/hebnote.njk");
  eleventyConfig.addLayoutAlias("mypost", "personal/mypost.njk");
+ eleventyConfig.addLayoutAlias("mydoc", "personal/mydoc.njk");
+ eleventyConfig.addLayoutAlias("hebdoc", "personal/hebdoc.njk");
+ 
+ eleventyConfig.addFilter('excerpt', (post) => {
+    const content = post.replace(/(<([^>]+)>)/gi, '');
+    return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
+  });
+  //eleventyConfig.addPlugin(imagesResponsiver);
+  eleventyConfig.addPlugin(readingTime);
+  eleventyConfig.addFilter("search", searchFilter);
+  eleventyConfig.addCollection("public", collection => {
+    return [...collection.getFilteredByGlob("./src/MyObsidian/public/**/*.md")];
+  });
+//-------------------------------------------
 
+  // Copy the `img` and `css` folders to the output
+  eleventyConfig.addPassthroughCopy({"src/js":"js"});
+  eleventyConfig.addPassthroughCopy({"src/css/images":`${publishAttachementsDir}`});
+  // Copy the relative obsidian img/attachemets  dir to the <publishAttachementsDir> directory
+   eleventyConfig.addPassthroughCopy({"src/MyObsidian/public/Attachments":`${publishAttachementsDir}`});
+//-----------------------------------------
+  eleventyConfig.addPlugin(codeblocks([
+    tables,
+	highlight,
+  ]))
+    eleventyConfig.addFilter('cssmin', function(code) {
+    return new cleanCSS({}).minify(code).styles
+  })
+  
     let markdownLib = markdownIt({
             breaks: true,
             html: true,
 			linkify: true
         })
-		.use(implicitFigures)
 		.use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
       placement: "after",
@@ -87,7 +118,8 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
             const defaultImageRule = md.renderer.rules.image || function(tokens, idx, options, env, self) {
                 return self.renderToken(tokens, idx, options, env, self);
             };
-             md.renderer.rules.image = (tokens, idx, options, env, self) => {
+
+            md.renderer.rules.image = (tokens, idx, options, env, self) => {
 				const imageName = tokens[idx].content;
 				const [fileNameInc, title] = imageName.split("?");
 				if (title) {
@@ -168,10 +200,13 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
             return `<a class="internal-link" href="${permalink}">${title}</a>`;
         });
     })
+
        
     eleventyConfig.addFilter("markdownify", string => {
         return mdB.render(string)
     })
+
+	
 
 
     eleventyConfig.addTransform('highlight', function(str) {
@@ -182,23 +217,8 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
     });
 
 
- 
- eleventyConfig.addFilter('excerpt', (post) => {
-    const content = post.replace(/(<([^>]+)>)/gi, '');
-    return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
-  });
-  
-  eleventyConfig.addPlugin(readingTime);
-//-------------------------------------------
-
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("css");
-  // Copy the relative img dir to img
-  // eleventyConfig.addPassthroughCopy({"src/posts/img": "img"});
-  
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
 
@@ -235,6 +255,9 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
   function filterTagList(tags) {
     return (tags || []).filter(tag => ["all", "nav", "post","posts","notes"].indexOf(tag) === -1);
   }
+  function sortTagList(tags) {
+    return (tags || []).sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
+  }
 
   eleventyConfig.addFilter("filterTagList", filterTagList)
 
@@ -242,10 +265,10 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();
     collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+      (item.data.tags || []).forEach(tag => tagSet.add(tag) );
     });
 
-    return filterTagList([...tagSet]);
+    return sortTagList(filterTagList([...tagSet]));
   });
 
 
@@ -276,10 +299,7 @@ eleventyConfig.addPassthroughCopy({"src/obsidianVault/public/posts/attachements"
       "njk",
       "html",
       "liquid", 
-	  "11ty.js",
-	  "jpeg",
-	  "jpg",
-	  "png"
+	  "11ty.js"
     ],
 
     // Pre-process *.md files with: (default: `liquid`)
