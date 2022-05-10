@@ -3,7 +3,7 @@
   <head>
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href=/11ty-Images/>
+    <link rel="canonical" href="https://&lt;metadata.url&gt;.netlify.app/11ty-Images/">
 	
 	 <title>Obsidian-11ty Images</title>
 	 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
@@ -26,67 +26,86 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-	 
+
 	 
 
     <meta name="description" content="How to manage and include images to your site">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
-    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Yaki Kimhi&#39;s Site">
-    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Yaki Kimhi&#39;s Site">
+	<link rel="stylesheet" href="/css/styles/animate.css">
+	<link rel="stylesheet" href="/css/styles/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/styles/custom-style.css">
+
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="(&lt;metadata.title&gt;)">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="(&lt;metadata.title&gt;)">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 
-    <title>
-      Obsidian-11ty Images
-      
-         | 
-      
-    </title>
 
-    <link rel="icon" type= “image/x-icon” href="/images/favicon.ico">
+    <link rel="icon" type= “image/x-icon” href="/css/images/favicon.ico">
 
     <meta property="og:title" content="Obsidian-11ty Images">
-    <meta property="og:site_name" content=""/>
+    <meta property="og:site_name" content="My Blog(&lt;metadata.header&gt;)"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="undefined/11ty-Images/"/>
+    <meta property="og:url" content="https://&lt;metadata.url&gt;.netlify.app//11ty-Images/"/>
     <meta name="twitter:card" content="summary_large_image">
 
     
+      <meta name="twitter:creator" content="@yakikim"/>
+    
 
+      <meta property="og:image" content="https://&lt;metadata.url&gt;.netlify.app//https://&lt;metadata.url&gt;.netlify.app/attch/vm6AicP4_400x400.jpg"/>
+      <meta name="twitter:image" content="https://&lt;metadata.url&gt;.netlify.app//https://&lt;metadata.url&gt;.netlify.app/attch/vm6AicP4_400x400.jpg"/>
 
-    
-      
-    
-    
 
 
 
 </head>
-  <body  dir=ltr >
-    <header class="header" style="direction: ltr">
-        <div class="header__content">
-      <h1 class="site-title"><a href="/">Yaki Kimhi&#39;s Site</a></h1>
+  <body  dir=ltr > 
+  <header class="header home menu-container" style="direction: ltr">
+	<div class="container">
+		<nav cclass="navbar navbar-inverse">
+			<div class="animated bounceInLeft menu-header">
+				<h1 class="site-title">
+				<a href="/">My Blog(&lt;metadata.header&gt;)</a></h1>
+			</div>
+			<div class="navbar-header">
+				
+				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">				
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="main-nav" class="collapse navbar-collapse">
+					<ul class="animated bounceIn nav__list nav navbar-nav " id="mainNav">
+						<li class="nav-item"><a href="/archive/">Archive</a></li>
+						<li class="nav-item"><a href="/notes/">Notes</a></li>
+						<li class="nav-item"><a href="/tags/">All Tags</a></li>
+						<li class="nav-item"><a href="/about/">About</a></li>
+					</ul>
+				<!-- </div> -->
 
+			</div>
 
-   <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav-item"><a href="/archive/">Archive</a></li>
-        <li class="nav-item"><a href="/notes/">Notes</a></li>
-        <li class="nav-item"><a href="/tags/">All Tags</a></li>
-        <li class="nav-item"><a href="/about/">About</a></li>
-      </ul>
-   </nav>
-        </div>
-    </header>
-
+		</nav>
+	</div>
+</header>
+   <section id="firstContent">  
+   
+	<div class="banner-container-other" role="navigation">
+	<img src="/attch/banner-bg.jpg" alt="banner">
+	</div>
+   
+</section>
+<section>
     <main class="tmpl-post">
 	<div dir=ltr >
 	
        <h1 >  </h1>
 
-</div>
+	</div>
+
 
 	  
       
@@ -124,22 +143,30 @@
 It's a perfect combination of manage privacy as well as lighting site and publish easily.</p>
 <h2 id="mapping-the-attachments-in-.eleventy.js-file" tabindex="-1">mapping the attachments in .eleventy.js file <a class="md-header-link" href="#mapping-the-attachments-in-.eleventy.js-file" aria-hidden="true" target="_self">#</a></h2>
 <p>change the value of the variable <code>publishAttachementsDir</code> to contain the output directory. for exemple:</p>
+
 <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> publishAttachementsDir <span class="token operator">=</span> <span class="token string">'attch'</span><span class="token punctuation">;</span></code></pre>
+
 <p>for every attachments directory you have to map it to the <code>_site/&lt;publishAttachementsDir&gt;</code> directory.<br>
 So below this line you can add as many mapping as needded for your attachments folders you may like to share from your vault to your site.<br>
 It can be done through:</p>
-<pre class="language-js"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>fromDir<span class="token operator">></span><span class="token operator">:</span><span class="token operator">&lt;</span>toDir<span class="token operator">></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<pre class="language-js"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token method function property-access">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token operator">&#x3C;</span>fromDir<span class="token operator">></span><span class="token operator">:</span><span class="token operator">&#x3C;</span>toDir<span class="token operator">></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
 <p>for example:</p>
-<pre class="language-js"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string-property property">"src/MyObsidian/public/attachments"</span><span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>publishAttachementsDir<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<pre class="language-js"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token method function property-access">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string-property property">"src/MyObsidian/public/attachments"</span><span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>publishAttachementsDir<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
 <h2 id="publish-image-to-the-site" tabindex="-1">Publish image to the site <a class="md-header-link" href="#publish-image-to-the-site" aria-hidden="true" target="_self">#</a></h2>
 <p>In your note, you can include your image with the format <code>![alt|width?title](src)</code> for example:<br>
 <img src="https://imgs.developpaper.com/guest/2019/01/logo.png" alt="My Alt text|200px?This is the image" title="This is the image" width="200px"></p>
-<pre><code>![My Alt text|200px?This is the image](https://imgs.developpaper.com/guest/2019/01/logo.png)
-</code></pre>
+
+<pre><code class="language-">![My Alt text|200px?This is the image](https://imgs.developpaper.com/guest/2019/01/logo.png)</code></pre>
+
 <p>Example from the local files (stayed at <code>src/MyObsidian/public/attachments</code>):<br>
 <img src="/attch/msedge_0sbOL3eK3s.png" alt="My Hill sprints |100%?hill sprints graph " title="hill sprints graph " width="100%"></p>
-<pre><code>![My Hill sprints |100%?hill sprints graph](msedge_0sbOL3eK3s.png)
-</code></pre>
+
+<pre><code class="language-">![My Hill sprints |100%?hill sprints graph](msedge_0sbOL3eK3s.png)</code></pre>
+
 
   </main>
 
@@ -160,12 +187,69 @@ It can be done through:</p>
 </article>
 	  
     </main>
+</section>
 
+<section>
     <footer>
 	
 	</footer>
-
+</section>
     <!-- Current page: /11ty-Images/ -->
+	
 
+
+	<script > 
+	function reveal() {
+  var reveals = document.querySelectorAll(".revealContent");
+  var menu_bg = document.querySelectorAll("main");
+  var header = document.querySelectorAll("header");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+  for (var i = 0; i < menu_bg.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = menu_bg[i].getBoundingClientRect().top;
+    var elementVisible = windowHeight*0.8;
+	
+    if (elementTop < windowHeight - elementVisible) {
+	  header[i].classList.add("menu-container-bg");
+    } else {
+	  header[i].classList.remove("menu-container-bg");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("main-nav");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<script src="/js/elasticlunr.min.js" type="text/javascript"></script>
+<script src="/js/myserch.js" type="text/javascript"></script>
+<script src="/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery.nav.js" type="text/javascript"></script>
+<script src="/js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/waypoints.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+<script src="/js/owl-carousel/owl.carousel.js"></script>
   </body>
 </html>

@@ -2,127 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yakikim.github.io/firstnote/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/firstnote/</loc>
     <lastmod>2018-05-01</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/secondnote/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/secondnote/</loc>
     <lastmod>2018-05-01</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/firstpost/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/firstpost/</loc>
     <lastmod>2018-05-01</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/secondpost/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/secondpost/</loc>
     <lastmod>2018-07-04</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/thirdnote/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/thirdnote/</loc>
     <lastmod>2018-08-24</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/thirdpost/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/thirdpost/</loc>
     <lastmod>2018-08-24</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/fourthpost/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/fourthpost/</loc>
     <lastmod>2018-09-30</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/</loc>
     <lastmod>2022-03-22</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/11ty-Images/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/11ty-Images/</loc>
     <lastmod>2022-04-24</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/about/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/about/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/archive/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/archive/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/notes/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/notes/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/page-list/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/page-list/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/search-index.json</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/another-tag/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/4th-post/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-tag/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/second-tag/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/4th-post/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/number-2/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-tag/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/posts-with-two-tags/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/number-2/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/notes/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/posts-with-two-tags/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/another-note/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/second-note/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/notes/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/11ty/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/images/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/11ty/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
   
   <url>
-    <loc>https://yakikim.github.io/tags/obsidian/</loc>
-    <lastmod>2022-04-25</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/images/</loc>
+    <lastmod>2022-05-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/obsidian/</loc>
+    <lastmod>2022-05-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/public/</loc>
+    <lastmod>2022-05-10</lastmod>
   </url>
 </urlset>
