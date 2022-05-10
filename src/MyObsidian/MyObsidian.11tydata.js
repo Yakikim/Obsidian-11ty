@@ -35,8 +35,7 @@ module.exports = {
         backlinks: (data) => {
             const notes = data.collections.notes;
 			// const posts = data.collections.posts;
-			const dafyomi = data.collections.dafyomi;
-			const regexy = /[\/]+[notes|MyObsidian]+[\/]+.+[\/]/i // replace 
+			const regexy = /[\/]+[obsidianVault|menu]+[\/]+.+[\/]/i // replace 
             const currentFileSlug = data.page.filePathStem.replace(regexy, '');
 
             let backlinks = [];
@@ -68,32 +67,7 @@ module.exports = {
                     })
                 }
             }
-		 for(const otherDaf of dafyomi) {
-                const dafContent = otherDaf.template.frontMatter.content;
-                   
-                // Get all links from otherDaf
-                const outboundLinks2 = (dafContent.match(wikilinkRegExp) || [])
-                    .map(link => (
-                        // Extract link location
-                        link.slice(2,-2)
-                            .split("|")[0]
-                            .replace(/.(md|markdown)\s?$/i, "")
-                            .trim()
-                    ));
-
-                // If the other note links here, return related info
-                if(outboundLinks2.some(link => caselessCompare(link, currentFileSlug))) {
-
-                    // Construct preview for hovercards
-					preview = convert(otherDaf.data.description || dafContent);
-					preview = preview.substr(0, preview.lastIndexOf(' ', 130)) + '...';//.slice(0, 240);
-                    backlinks.push({
-                        url: otherDaf.url,
-                        title: otherDaf.data.title,
-                        preview
-                    })
-                }
-            } 
+		
 			
             return backlinks;
         }
