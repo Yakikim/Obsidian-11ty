@@ -1,17 +1,15 @@
 ---
 layout: layouts/base.njk
+title: Yakis blog
 ---
 
-  <main class="post__content">
+
+  <main class="post__content ">
     {{ content | safe }}
   </main>
-<section class="post-list__wrapper" >
+<section class="post-list__wrapper revealContent" >
   <h2 class="post-list__heading">Recent 5 Posts</h2>
-<div style="margin: 2rem;
-    padding-left: 2rem;
-	padding-right: 2rem;
-    border: 2px solid #e6e6e6;
-    border-radius: 12px;">
+<div style="border-top: 2px solid #e6e6e6;">
   {% set postslist = collections.posts | head(-5) %}
 
   {% include "componnents/postslist.njk" %}

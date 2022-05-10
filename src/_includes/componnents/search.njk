@@ -1,0 +1,14 @@
+
+{% block content %}
+
+  <div class="field">
+    <!-- <label for="searchField">Search</label> -->
+    <input type="search" placeholder="Search..." id="searchField">
+  </div>
+  <ol id="searchResults"></ol>
+  <div id="noResultsFound" style="display: none">
+    <p>No results found.</p>
+  </div>
+<script src="/js/elasticlunr.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/js/mysearch.js"></script>
+{% endblock %}

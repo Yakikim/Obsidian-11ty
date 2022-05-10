@@ -1,0 +1,82 @@
+---
+cssclasses: ltr
+draft: false
+permalink: /{{ page.fileSlug }}/
+type: Document
+description: ...
+layout: layouts/base.njk
+---
+
+
+
+
+<article class="post" dir={{ cssclasses or metadate.cssclasses }}>
+ 
+ <header class="note_header">
+    <h1>{{ title }}</h1>
+		
+
+
+    <div class="note_details">
+      <time datetime="{{ page.date | htmlDateString }}">
+        {{ page.date | readableDate }}
+      </time>
+      <span> | </span>
+     <span>{{ content | readingTime }} read</span>
+	</div>
+
+  </header>
+<main class="note_content">
+<div id="notes-container">
+
+<section class="note_section">
+
+{{ content | safe }}
+
+</section>
+ <aside class="note_aside">
+
+	<p class="tags-title">Tags:</p>
+    <div class="note_tags" >
+      {% for tag in tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+	  
+
+{% include "componnents/backlinks.njk" %} 
+
+
+ {% include "componnents/share-twitter.njk" %}
+  </aside>
+</div>
+  </main>
+
+ 
+
+</article>
+
+ <nav class="post__pagination">
+      {%- set nextPost = collections.notes | getNextCollectionItem(page) %}
+      {%- if nextPost %}
+
+        <a href="{{ nextPost.url | url }}">
+          <span>←</span>
+          <span>{{ nextPost.data.title }}</span>
+        </a>
+
+      {% endif %}
+
+      {%- set previousPost = collections.notes | getPreviousCollectionItem(page) %}
+      {%- if previousPost %}
+
+        <a href="{{ previousPost.url | url }}">
+          <span>{{ previousPost.data.title }}</span>
+          <span>→</span>
+        </a>
+
+      {% endif %}
+    </nav>
+	
+

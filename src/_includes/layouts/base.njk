@@ -3,76 +3,94 @@
   <head>
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+    <link rel="canonical" href="{{ page.url | url | absoluteUrl(metadata.url) }}">
 	
 	 <title>{{ title or metadata.title }}</title>
 	 {%include "componnents/pageheader.njk"%}
-	 
+
 	 
 
     <meta name="description" content="{{ description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+	<link rel="stylesheet" href="{{ '/css/styles/animate.css' | url }}">
+	<link rel="stylesheet" href="{{ '/css/styles/bootstrap.min.css' | url }}">
+	<link rel="stylesheet" href="{{ '/css/styles/custom-style.css' | url }}">
+
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 
-    <title>
-      {{  title  | escape }}
-      {% if title %}
-         | {{ site.name }}
-      {% else %}
-        {{ site.name }}
-      {% endif %}
-    </title>
 
-    <link rel="icon" type= “image/x-icon” href="/images/favicon.ico">
+    <link rel="icon" type= “image/x-icon” href="{{ metadata.appicon | url }}">
 
-    <meta property="og:title" content="{{  title or site.name | escape }}">
-    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:title" content="{{  title or metadata.title | escape }}">
+    <meta property="og:site_name" content="{{ metadata.header }}"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="{{ site.url + page.url }}"/>
+    <meta property="og:url" content="{{ metadata.url + page.url }}"/>
     <meta name="twitter:card" content="summary_large_image">
 
-    {% if site.author.twitterHandle %}
-      <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
+    {% if metadata.author.twitterHandle %}
+      <meta name="twitter:creator" content="@{{ metadata.author.twitterHandle | replace('@', '') }}"/>
     {% endif %}
 
+      <meta property="og:image" content="{{ metadata.url }}/{{ socialImage or metadata.socialImage | url | absoluteUrl(metadata.url) }}"/>
+      <meta name="twitter:image" content="{{ metadata.url }}/{{ socialImage or metadata.socialImage | url | absoluteUrl(metadata.url) }}"/>
 
-    {% if not socialImage %}
-      {% set socialImage = site.defaultSocialImage %}
-    {% endif %}
-    {% if socialImage %}
-      <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
-      <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
-    {% endif %}
 
 
 
 </head>
-  <body  dir={{ cssclasses or metadate.cssclasses }} >
-    <header class="header" style="direction: ltr">
-        <div class="header__content">
-      <h1 class="site-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+  <body  dir={{ cssclasses or metadate.cssclasses }} > 
+  <header class="header home menu-container" style="direction: ltr">
+	<div class="container">
+		<nav cclass="navbar navbar-inverse">
+			<div class="animated bounceInLeft menu-header">
+				<h1 class="site-title">
+				<a href="{{ '/' | url }}">{{ metadata.header }}</a></h1>
+			</div>
+			<div class="navbar-header">
+				
+				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">				
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="main-nav" class="collapse navbar-collapse">
+					<ul class="animated bounceIn nav__list nav navbar-nav " id="mainNav">
+					{%- for entry in collections.all | eleventyNavigation %}
+						<li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+					{%- endfor %}
+					</ul>
+				<!-- </div> -->
 
+			</div>
 
-   <nav class="nav">
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav__list">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
-   </nav>
-        </div>
-    </header>
-
+		</nav>
+	</div>
+</header>
+   <section id="firstContent">  
+   {% if page.url == '/' %} 
+  	<div class="banner-container" role="navigation">
+	<img src="{{ metadata.bg-image | url }}" alt="banner">
+	  <div class="fadeInUpBig animated home-animated_text">
+		  	{%include "componnents/welcome.njk"%}
+      </div>
+	</div>
+	{% else %}
+	<div class="banner-container-other" role="navigation">
+	<img src="{{ metadata.bg-image | url }}" alt="banner">
+	</div>
+   {% endif %}
+</section>
+<section>
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 	<div dir={{ cssclasses or metadate.cssclasses }} >
 	{%include "componnents/megatitle.njk"%}
-</div>
+	</div>
+
 
 	  {% if draft|length %}
 	  <a href="/" > back to home </a>
@@ -80,12 +98,69 @@
       {{ content | safe }}
 	  {% endif %}
     </main>
+</section>
 
+<section>
     <footer>
 	
 	</footer>
-
+</section>
     <!-- Current page: {{ page.url | url }} -->
+	
 
+
+	<script > 
+	function reveal() {
+  var reveals = document.querySelectorAll(".revealContent");
+  var menu_bg = document.querySelectorAll("main");
+  var header = document.querySelectorAll("header");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+  for (var i = 0; i < menu_bg.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = menu_bg[i].getBoundingClientRect().top;
+    var elementVisible = windowHeight*0.8;
+	
+    if (elementTop < windowHeight - elementVisible) {
+	  header[i].classList.add("menu-container-bg");
+    } else {
+	  header[i].classList.remove("menu-container-bg");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("main-nav");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<script src="/js/elasticlunr.min.js" type="text/javascript"></script>
+<script src="/js/myserch.js" type="text/javascript"></script>
+<script src="/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery.nav.js" type="text/javascript"></script>
+<script src="/js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/waypoints.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+<script src="/js/owl-carousel/owl.carousel.js"></script>
   </body>
 </html>
