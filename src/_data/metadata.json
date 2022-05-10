@@ -3,7 +3,7 @@
   "header": "My Blog(<metadata.header>)",
   "url": "https://<metadata.url>.netlify.app/",
   "language": "iw",
-  "appicon": "/css/images/favicon.ico",
+  "appicon": "https://forum.obsidian.md/uploads/default/original/1X/bf119bd48f748f4fd2d65f2d1bb05d3c806883b5.png",
   "cssclasses": "rtl",
   "description": "Docs, Guides and specs",
   "bgimage": "/attch/banner-bg.jpg",
