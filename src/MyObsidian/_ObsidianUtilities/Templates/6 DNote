@@ -1,0 +1,56 @@
+---
+layout: dailynotes
+tags: [daily, tasks] 
+date: <% tp.file.creation_date("YYYY-MM-DD") %>
+title: Daily Note <% tp.file.title %>	
+---
+
+<% "[[" + tp.date.weekday("YYYY-MM-DD" ,0)  + "]]" %>
+
+---
+
+```ad-tip
+<% tp.web.daily_quote() %>
+
+<% tp.web.random_picture("600x200") %>  
+```
+
+---
+{#
+
+
+## Notes for today: 
+
+[[<% tp.file.title %>N1]]
+
+[[<% tp.file.title %>N2]]
+
+---
+
+````ad-info
+title: Tasks
+collapse: open
+### To complete today
+```tasks
+not done
+due on {{<% tp.file.title %>}}
+```
+
+### To complete this week
+
+```tasks
+not done
+due after {{<% tp.date.weekday("YYYY-MM-DD",0, tp.file.title, "YYYY-MM-DD") %>}}
+due before {{<% tp.date.weekday("YYYY-MM-DD", 7, tp.file.title, "YYYY-MM-DD") %>}}
+```
+
+
+### Completed today
+
+```tasks
+done on {{<% tp.file.title %>}}
+```
+````
+
+
+#}

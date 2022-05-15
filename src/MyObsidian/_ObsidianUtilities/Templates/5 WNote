@@ -1,0 +1,84 @@
+---
+layout: mynote
+cssclasses: rtl
+tags: [tasks, weekly] 
+date: <% tp.file.last_modified_date("YYYY-MM-DD") %>
+draft: true
+title: Weekly tasks for <% tp.date.weekday("DD/MM/YYYY", 0, tp.file.title, "YYYY-MM-DD") %>
+---
+
+# Weekly Tasks: <% tp.file.title %>	
+
+<< [[<% tp.date.weekday("YYYY-MM-DD", -7, tp.file.title, "YYYY-MM-DD") %>]] | [[<% tp.date.weekday("YYYY-MM-DD", 7, tp.file.title, "YYYY-MM-DD") %>]] >>
+
+```ad-tip
+collapse: open
+title: Daily Tip
+color: 20,20,22
+<% tp.web.daily_quote() %>
+
+<% tp.web.random_picture("800x300") %>  
+```
+{#
+
+## ToDo This Week
+- [ ]  
+
+
+
+````ad-info
+title: Tasks
+collapse: open
+
+## In Late 
+```tasks
+not done
+due before {{<% tp.date.weekday("YYYY-MM-DD",0, tp.file.title, "YYYY-MM-DD") %>}}
+```
+
+
+
+## <% tp.date.weekday("ddd",  0, tp.file.title, "YYYY-MM-DD") %> [[<% tp.date.weekday("YYYY-MM-DD", 0, tp.file.title, "YYYY-MM-DD") %>]]
+```tasks
+due on {{<% tp.date.weekday("YYYY-MM-DD",0, tp.file.title, "YYYY-MM-DD") %>}}
+```
+_**Done:**_
+```tasks
+done on {{<% tp.date.weekday("YYYY-MM-DD",0, tp.file.title, "YYYY-MM-DD") %>}}
+```
+## <% tp.date.weekday("ddd",  1, tp.file.title, "YYYY-MM-DD") %> [[<% tp.date.weekday("YYYY-MM-DD", 1, tp.file.title, "YYYY-MM-DD") %>]]
+```tasks
+due on {{<% tp.date.weekday("YYYY-MM-DD",1, tp.file.title, "YYYY-MM-DD") %>}}
+```
+_**Done:**_
+```tasks
+done on {{<% tp.date.weekday("YYYY-MM-DD",1, tp.file.title, "YYYY-MM-DD") %>}}
+```
+
+## <% tp.date.weekday("ddd",  2, tp.file.title, "YYYY-MM-DD") %> [[<% tp.date.weekday("YYYY-MM-DD", 2, tp.file.title, "YYYY-MM-DD") %>]]
+```tasks
+due on {{<% tp.date.weekday("YYYY-MM-DD",2, tp.file.title, "YYYY-MM-DD") %>}}
+```
+_**Done:**_
+```tasks
+done on {{<% tp.date.weekday("YYYY-MM-DD",2, tp.file.title, "YYYY-MM-DD") %>}}
+```
+## <% tp.date.weekday("ddd",  3, tp.file.title, "YYYY-MM-DD") %> [[<% tp.date.weekday("YYYY-MM-DD", 3, tp.file.title, "YYYY-MM-DD") %>]]
+```tasks
+due on {{<% tp.date.weekday("YYYY-MM-DD",3, tp.file.title, "YYYY-MM-DD") %>}}
+```
+_**Done:**_
+```tasks
+done on {{<% tp.date.weekday("YYYY-MM-DD",3, tp.file.title, "YYYY-MM-DD") %>}}
+```
+## <% tp.date.weekday("ddd",  4, tp.file.title, "YYYY-MM-DD") %> [[<% tp.date.weekday("YYYY-MM-DD", 4, tp.file.title, "YYYY-MM-DD") %>]]
+```tasks
+due on {{<% tp.date.weekday("YYYY-MM-DD",4, tp.file.title, "YYYY-MM-DD") %>}}
+```
+_**Done:**_
+```tasks
+done on {{<% tp.date.weekday("YYYY-MM-DD",4, tp.file.title, "YYYY-MM-DD") %>}}
+```
+````
+
+#}

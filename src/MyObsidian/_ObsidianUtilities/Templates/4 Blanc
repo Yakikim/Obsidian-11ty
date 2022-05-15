@@ -1,0 +1,10 @@
+---
+tags: [] 
+date: <% tp.file.last_modified_date("YYYY-MM-DD") %>
+title: 
+draft: 
+layout: 
+description: ...
+---
+
+<% await tp.file.move("/public/" + tp.file.title ) %>

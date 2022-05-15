@@ -1,0 +1,12 @@
+---
+cssclasses: ltr
+tags: [] 
+date: <% tp.file.last_modified_date("YYYY-MM-DD") %>
+type: Document
+title:  
+draft: true
+layout: mynote
+description: 
+---
+
+<% await tp.file.move("/private/" + tp.file.title ) %>
