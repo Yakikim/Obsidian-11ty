@@ -10,7 +10,6 @@
 
     const resEl = document.getElementById("searchResults");
     const noResultsEl = document.getElementById("noResultsFound");
-
     resEl.innerHTML = "";
     if (results) {
       noResultsEl.style.display = "none";
@@ -32,6 +31,7 @@
         el.appendChild(p);
       });
     } else {
+		resEl.style.display = "none";
       noResultsEl.style.display = "block";
     }
   };

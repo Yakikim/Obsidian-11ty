@@ -706,7 +706,7 @@ mark {
   margin: 0;
   position: fixed;
     width: 100%;
-    z-index: 50;
+    z-index: 1;
     border-radius: 0;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -1498,6 +1498,7 @@ padding-left: 2em;
 	background-color: var(--bg-header);
 	margin:25px;
     margin-bottom: 0px;
+	position:inherit;
 
 }
 .navbar-inverse-custom {
@@ -1652,23 +1653,124 @@ opacity: 1;
 	.shared_resetList{list-style:none}
 	
 
-input:not([type]),[type="text"],[type="email"],[type="number"],[type="search"],[type="password"],[type="url"],[type="tel"],[type="checkbox"],[type="radio"],textarea,select{box-sizing:border-box;background:var(--input-back-color);color:var(--input-fore-color);border:.0625rem solid var(--input-border-color);border-radius:var(--universal-border-radius);margin:calc(var(--universal-margin) / 2);}
 
 
-[type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
+
+.search-container{
+	margin-top: 10px;
+	padding: 1px;
+	width: 30px;    
+	background: #fdfdfd47;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+	float:right;
+  
 }
-input {
-    overflow: visible;
-	padding: 15px;
-	width: 50%;
-	font-size: x-large;
+.search-container:hover {
+	width: fit-content;
+	height: 40px;
+    background: #fff;
+	box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+
 }
-label {
-	font-size: large;
-    display: inline-block;
-    max-width: 100%; 
-	margin-bottom: 5px;
-    font-weight: inherit;
+
+.search-container:hover > .search-input{
+    width: 90%;
+	
+}
+.search-container #searchResults:hover{
+    width: 90%;
+
+	}
+
+.search-container:hover #searchResults{
+    height: fit-content;
+    display: block;
+    background: white;
+    position: fixed;
+	margin-top: 20px;
+	width: 250px;
+
+}
+@media (min-width:700px){
+.search-container:hover #searchResults{
+    height: fit-content;
+    /* border-radius: 10px; */
+    width: inherit;
+	left: inherit;
+}
+.search-container{
+	padding: 20px;
+	}
+.search-container:hover > .search-input{
+    width: 400px;
+	
+	}
+.search-container #searchResults:hover{
+    width: 400px;
+	}
+
+
+}
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+
+#searchResults{
+    height: inherit;
+    background: inherit;
+	padding: 0px;
+    width: 0px;
+	display: none;
+}
+
+
+.search-container .search-btn .fas{
+    color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+#searchResults > li{
+padding-right: 10px;
+padding-left: 10px;
+padding-top:2px;
+
+}
+ > h3 {
+	color: #303030;
+	font-size: 0.85em;
+	margin: 0px;
+}
+#searchResults > li > p {
+    font-size: 0.8em;
+}
+
+.searchResultsBox {
+    position: fixed;
+    width: 400px;    
+	z-index: 2;
 }
