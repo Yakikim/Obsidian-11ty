@@ -2,8 +2,6 @@
 tags: [11ty, images,obsidian] 
 date: 2022-04-24
 title: Obsidian-11ty Images 
-draft: false
-layout: mypost
 description: How to manage and include images to your site
 ---
 

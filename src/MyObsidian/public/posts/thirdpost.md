@@ -1,29 +1,29 @@
 ---
-title: This is my third post.
-description: This is a post on My Blog about win-win survival strategies.
-date: 2018-08-24
-tags:
-  - second tag
-  - posts with two tags
-layout: layouts/post.njk
+tags: [ords, source, options, rest] 
+date: 2018-01-24
+title: ORDS - Source type options
+description: The source types options based on oracle documentations
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+## The options of source types
 
-``` js/2/4
-// this is a command
-function myCommand() {
-	let counter = 0;
+Defines the source implementation for the selected HTTP method.
 
-	counter++;
+Options include:
 
-}
-
-// Test with a line break above this line.
-console.log('Test');
+-   **Collection Query** - Executes a SQL query and transforms the result set into an ORDS Standard JSON representation. Available when the HTTP method is GET. Result Format: JSON
+-   **Collection Query Item** - Executes a SQL query returning one row of data into a ORDS Standard JSON representation. Available when the HTTP method is GET. Result Format: JSON
+-   **PL/SQL** - Executes an anonymous PL/SQL block and transforms any OUT or IN/OUT parameters into a JSON representation. The htp.p function may also be used to emit custom JSON. Result Format: JSON
+-   **Media Resource** - Executes a SQL Query conforming to a specific format and turns the resultset into a binary representation with an accompanying HTTP Content-Type header identifying the internet media type of the representation. The format of the SQL query should be:
+```sql
+    SELECT 'content_type', column FROM . . .
 ```
+> where _'content\_type'_  is a string passed to the browser to be used to identify the incoming data, for example _'image/jpeg'_, and _column_ is the name of the column containing the source of the data being sent back. The Media Resource Source type is typically used for media objects, such as images, where the data will be directly handled by the recipient making the call.
+    
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+  
 
-## Section Header
+**NOTE:** The following are considered deprecated as they represent options specific to APEX Based REST Services.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+-   **Query** - Executes a SQL query and transforms the result set into either an ORDS legacy JavaScript Object Notation (JSON) or CSV representation, depending on the format selected. Available when the HTTP method is GET. Result Format: JSON or CSV
+-   **Query One Row** - Executes a SQL query returning one row of data into an ORDS legacy JSON representation. Available when the HTTP method is GET. Result Format: JSON
+-   **Feed** - Executes a SQL query and transforms the results into a JSON Feed representation. Each item in the feed contains a summary of a resource and a hyperlink to a full representation of the resource. The first column in each row in the result set must be a unique identifier for the row and is used to form a hyperlink of the form: _path/to/feed/{id}_, with the value of the first column being used as the value for _{id}_. The other columns in the row are assumed to summarize the resource and are included in the feed. A separate resource template for the full representation of the resource should also be defined. Result Format: JSON

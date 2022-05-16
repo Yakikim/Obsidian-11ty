@@ -1,5 +1,8 @@
 {
   "tags": [
     "notes"
-  ]
+  ],
+  "layout": "mynote",
+  "draft": false,
+  "cssclasses": "ltr"
 }

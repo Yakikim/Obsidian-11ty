@@ -27,8 +27,14 @@
         <a  href="{{ notes.url }}">{{ notes.data.title }}</a>
       </h3>
 
+   {% if notes.data.description %}
+		<p class="post-list__excerpt">
+			{{ notes.data.description  | safe }}
+		</p>
+		{% else %} 
+			<p class="post-list__excerpt">{{ notes.templateContent | excerpt | safe  }}</p>
 
-	 <p class="post-list__excerpt">{{ notes.templateContent | excerpt | safe  }}</p> 
+        {% endif %}
 
 
       <a class="post-list__read-more" href="{{ notes.url }}">read article</a>
