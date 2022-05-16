@@ -39,9 +39,9 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
-
-    <link rel="icon" type= “image/x-icon” href="/css/images/favicon.ico">
+    <link rel="icon" type= “image/x-icon” href="https://forum.obsidian.md/uploads/default/original/1X/bf119bd48f748f4fd2d65f2d1bb05d3c806883b5.png">
 
     <meta property="og:title" content="Tagged “11ty”">
     <meta property="og:site_name" content="My Blog(&lt;metadata.header&gt;)"/>
@@ -62,33 +62,76 @@
 </head>
   <body  dir= > 
   <header class="header home menu-container" style="direction: ltr">
+
+
+
+
+
+   
+
+	
+  <div class="field">
+    <!-- <label for="searchField">Search</label> -->
+	<div class="search-container">
+        <input type="text" name="search" placeholder="Search..." class="search-input" id="searchField">
+		
+		<a href="#" class="search-btn">
+                <i class="fas fa-search"></i>      
+        </a>
+		<div class="searchResultsBox">
+		<ol id="searchResults">
+		</ol>
+		</div>	
+    </div>
+
+  </div>
+ 
+  <div id="noResultsFound" style="display: none">
+    <p>No results found.</p>
+  </div>
+	<script src="/js/elasticlunr.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/js/mysearch.js"></script>
+
+
 	<div class="container">
+
+
 		<nav cclass="navbar navbar-inverse">
 			<div class="animated bounceInLeft menu-header">
+				
 				<h1 class="site-title">
 				<a href="/">My Blog(&lt;metadata.header&gt;)</a></h1>
 			</div>
-			<div class="navbar-header">
 				
-				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">				
+			<div class="navbar-header">
+			
+				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">		
+				
 					<span class="sr-only">Toggle navigation</span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span>
 				</button>
+					
 			</div>
+
 			<div id="main-nav" class="collapse navbar-collapse">
+				
 					<ul class="animated bounceIn nav__list nav navbar-nav " id="mainNav">
 						<li class="nav-item"><a href="/archive/">Archive</a></li>
 						<li class="nav-item"><a href="/notes/">Notes</a></li>
 						<li class="nav-item"><a href="/tags/">All Tags</a></li>
 						<li class="nav-item"><a href="/about/">About</a></li>
+					
 					</ul>
-				<!-- </div> -->
 
+					
+				<!-- </div> -->
 			</div>
 
+
 		</nav>
+				
 	</div>
 </header>
    <section id="firstContent">  

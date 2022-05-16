@@ -48,91 +48,96 @@
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/about/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/archive/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/notes/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/page-list/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/search-index.json</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/home/</loc>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-tag/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/4th-post/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-tag/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/number-2/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/posts-with-two-tags/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/notes/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/11ty/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/images/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/obsidian/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/public/</loc>
-    <lastmod>2022-05-10</lastmod>
+    <lastmod>2022-05-16</lastmod>
   </url>
 </urlset>
