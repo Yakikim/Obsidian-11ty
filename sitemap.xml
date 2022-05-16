@@ -87,11 +87,6 @@
   </url>
   
   <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
@@ -112,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/beitar/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
   
@@ -128,6 +123,21 @@
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/obsidian/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/http/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/request/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/beitar/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
   
@@ -148,16 +158,6 @@
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/rest/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/http/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/request/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
   
