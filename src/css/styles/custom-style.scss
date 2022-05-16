@@ -1447,7 +1447,7 @@ padding-left: 2em;
 .banner-container-other > img {
     width: 100%;
 	max-width: 100%;
-    height: 240px;
+
 }
 .banner-container, .banner-container-other {
 	width: 100%;
@@ -1457,7 +1457,13 @@ padding-left: 2em;
     /* background: url(../images/banner-bg.jpg) no-repeat; */
     background-size: 100% 100%;
     background-size: cover;
+	overflow: hidden;
+	height: 240px;
 	}
+.banner-container {    
+height: inherit;
+}
+
 .banner-container > img {
     width: 100%;
 	max-width: 100%;
@@ -1466,7 +1472,7 @@ padding-left: 2em;
 @media (max-width: 480px) {
 .banner-container > img {
     width: 100%;
-    height: 360px;
+	height: 340px;
 }}
 @media (min-width: 768px){
 .navbar-nav > li > a {
