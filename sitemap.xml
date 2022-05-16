@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/secondpost/</loc>
+    <lastmod>1998-05-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/thirdpost/</loc>
+    <lastmod>2018-01-24</lastmod>
+  </url>
+  
+  <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/firstnote/</loc>
     <lastmod>2018-05-01</lastmod>
   </url>
@@ -12,28 +22,13 @@
   </url>
   
   <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/firstpost/</loc>
-    <lastmod>2018-05-01</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/secondpost/</loc>
-    <lastmod>2018-07-04</lastmod>
-  </url>
-  
-  <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/thirdnote/</loc>
     <lastmod>2018-08-24</lastmod>
   </url>
   
   <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/thirdpost/</loc>
-    <lastmod>2018-08-24</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/fourthpost/</loc>
-    <lastmod>2018-09-30</lastmod>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/firstpost/</loc>
+    <lastmod>2022-03-01</lastmod>
   </url>
   
   <url>
@@ -82,32 +77,7 @@
   </url>
   
   <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-tag/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/4th-post/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-tag/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/number-2/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/posts-with-two-tags/</loc>
-    <lastmod>2022-05-16</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/ultimate-note/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
   
@@ -118,6 +88,31 @@
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/running/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/cardiotoxicity/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/helth/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/beitar/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
   
@@ -133,6 +128,36 @@
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/obsidian/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/ords/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/source/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/options/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/rest/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/http/</loc>
+    <lastmod>2022-05-16</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/request/</loc>
     <lastmod>2022-05-16</lastmod>
   </url>
   

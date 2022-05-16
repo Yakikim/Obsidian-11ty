@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://&lt;metadata.url&gt;.netlify.app/firstpost/">
 	
-	 <title>This Is My First Post.</title>
+	 <title>About HTTP-Post.</title>
 	 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({
@@ -29,7 +29,7 @@
 
 	 
 
-    <meta name="description" content="This is a post on My Blog about agile frameworks.">
+    <meta name="description" content="This is a post on My Blog about HTTP-Post.">
 	<link rel="stylesheet" href="/css/styles/animate.css">
 	<link rel="stylesheet" href="/css/styles/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/styles/custom-style.css">
@@ -43,7 +43,7 @@
 
     <link rel="icon" type= “image/x-icon” href="https://forum.obsidian.md/uploads/default/original/1X/bf119bd48f748f4fd2d65f2d1bb05d3c806883b5.png">
 
-    <meta property="og:title" content="This Is My First Post.">
+    <meta property="og:title" content="About HTTP-Post.">
     <meta property="og:site_name" content="My Blog(&lt;metadata.header&gt;)"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://&lt;metadata.url&gt;.netlify.app//firstpost/"/>
@@ -60,11 +60,17 @@
 
 
 </head>
-  <body  dir= > 
+  <body  dir=ltr > 
   <header class="header home menu-container" style="direction: ltr">
 
-
-
+	<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">		
+				
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+	
 
 
    
@@ -105,13 +111,7 @@
 				
 			<div class="navbar-header">
 			
-				<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">		
-				
-					<span class="sr-only">Toggle navigation</span> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span>
-				</button>
+			
 					
 			</div>
 
@@ -142,8 +142,8 @@
    
 </section>
 <section>
-    <main>
-	<div dir= >
+    <main class="tmpl-post">
+	<div dir=ltr >
 	
        <h1 >  </h1>
 
@@ -153,40 +153,40 @@
 	  
       
 
-<article class="post" dir=>
+<article class="post" dir=ltr>
   <header   class="post__header">
-    <h1>This Is My First Post.</h1>
+    <h1>About HTTP-Post.</h1>
     <div class="post__details">
-      <time datetime="2018-05-01">
-        01 May 2018
+      <time datetime="2022-03-01">
+        01 Mar 2022
       </time>
       <span> | </span>
-     <span>1 min read</span>
+     <span>3 min read</span>
 	</div>
 
   </header>
 	<div class="post__tags">
       
         
-        <a href="/tags/another-tag/">#another tag</a>
+        <a href="/tags/http/">#HTTP</a>
+      
+        
+        <a href="/tags/request/">#request</a>
       
     </div>
 	
   <main class="post__content">
-    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-<h2 id="section-header" tabindex="-1">Section Header <a class="md-header-link" href="#section-header" aria-hidden="true" target="_self">#</a></h2>
-<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-
-<pre><code class="language-text/2-3">// this is a command
-function myCommand() {
-	let counter = 0;
-	counter++;
-}
-
-// Test with a line break above this line.
-console.log('Test');</code></pre>
-
+    
+<p><img src="/attch/HTTP_logo.svg" alt="http|100px" width="100px"></p>
+<h2 id="post" tabindex="-1">Post <a class="md-header-link" href="#post" aria-hidden="true" target="_self">#</a></h2>
+<p>In computing, POST is a request method supported by HTTP used by the World Wide Web. By design, the POST request method requests that a web server accept the data enclosed in the body of the request message, most likely for storing it. It is often used when uploading a file or when submitting a completed web form.</p>
+<p>In contrast, the HTTP GET request method retrieves information from the server. As part of a GET request, some data can be passed within the URL's query string, specifying (for example) search terms, date ranges, or other information that defines the query.</p>
+<p>As part of a POST request, an arbitrary amount of data of any type can be sent to the server in the body of the request message. A header field in the POST request usually indicates the message body's Internet media type.</p>
+<h2 id="posting-data" tabindex="-1">Posting data <a class="md-header-link" href="#posting-data" aria-hidden="true" target="_self">#</a></h2>
+<p>The world wide Web and HTTP are based on a number of request methods or 'verbs', including POST and GET as well as PUT, DELETE, and several others. Web browsers normally use only GET and POST, but RESTful online apps make use of many of the others. POST's place in the range of HTTP methods is to send a representation of a new data entity to the server so that it will be stored as a new subordinate of the resource identified by the URI. For example, for the URI <a href="http://example.com/customers" target="_self" class="external-link">http://example.com/customers</a>, POST requests might be expected to represent new customers, each including their name, address, contact details and so on. Early website designers strayed away from this original concept in two important ways. First, there is no technical reason for a URI to textually describe the web resource subordinate to which POST data will be stored. In fact, unless some effort is made, the last part of a URI will more likely describe the web application's processing page and its technology, such as <a href="http://example.com/applicationform.php" target="_self" class="external-link">http://example.com/applicationform.php</a>. Secondly, given most web browsers' natural limitation to use only GET or POST, designers felt the need to re-purpose POST to do many other data submission and data management tasks, including the alteration of existing records and their deletion.</p>
+<p>Efforts by some influential writers to remedy the first point began as early as 1998. Web application frameworks such as Ruby on Rails and others make it easier for designers to provide their users with semantic URLs. With regard to the second point, it is possible to use client-side scripting, or to write standalone apps, to make use of the other HTTP methods where they are relevant, but outside of this most web forms that submit or alter server data continue to use POST for the purpose.</p>
+<p>That is not to say that every web form should specify method=&quot;post&quot; in its opening tag. Many forms are used to specify more precisely the retrieval of information from the server, without any intention of altering the main database. Search forms, for example, are ideally suited to having method=&quot;get&quot; specified.</p>
+<p>There are times when HTTP GET is less suitable even for data retrieval. An example of this is when a great deal of data would need to be specified in the URL. Browsers and web servers can have limits on the length of the URL that they will handle without truncation or error. Percent-encoding of reserved characters in URLs and query strings can significantly increase their length, and while Apache HTTP Server can handle up to 4,000 characters in a URL, Microsoft Internet Explorer is limited to 2,048 characters in any URL. Equally, HTTP GET should not be used where sensitive information, such as usernames and passwords, have to be submitted along with other data for the request to complete. Even if HTTPS is used, preventing the data from being intercepted in transit, the browser history and the web server's logs will likely contain the full URL in plaintext, which may be exposed if either system is hacked. In these cases, HTTP POST should be used</p>
 
   </main>
 
@@ -195,9 +195,16 @@ console.log('Test');</code></pre>
 
     <nav class="post__pagination">
 
-        <a href="/secondpost/">
+        <a href="/11ty-Images/">
           <span>←</span>
-          <span>This Is My Second Post.</span>
+          <span>Obsidian-11ty Images</span>
+        </a>
+
+      
+
+        <a href="/thirdpost/">
+          <span>ORDS - Source Type Options</span>
+          <span>→</span>
         </a>
 
       
