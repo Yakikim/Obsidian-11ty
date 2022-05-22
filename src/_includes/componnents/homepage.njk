@@ -19,3 +19,16 @@ title: Yakis blog
 </div>
 
 </section>
+
+<section class="post-list__wrapper revealContent" >
+  <h2 class="post-list__heading">Recent 5 Notes</h2>
+<div style="border-top: 2px solid #e6e6e6;">
+  {% set noteslist = collections.notes | head(-5) %}
+
+  {% include "componnents/noteslist.njk" %}
+
+<a class="all-posts-link" href="{{ '/notes/' | url }}">View All Notes</a>
+
+</div>
+
+</section>
