@@ -1,52 +1,29 @@
 # Obsidian-11ty
-This repository if platform for enabling your Obsidian's vaults (or just part of it) to the public using Github-Pages or inside your organization using Docker-container as server.
+[Demo](https://obsidian-11ty.netlify.app/) site.
+This project has created as a platform for publishing selected posts/notes of your [Obsidian]https://obsidian.md/) vault using the front-meter data. It uses the beautiful [Eleventy, as static site generator platform](https://www.11ty.dev/). 
+The main features that makes the Obsidian so cool and implemented here, are: 
+- Turn Wikilinks `[[links]]` as well as MDLinks `[links](links.md)` into HTML links
+- Images display with custom width
+- Mermaid.js charts 
+- Backlinks
+- Search option
+and etc.
+### Project Description
+Using this repository you will be able to:
+1. (optional) Easily start using Obsidian with my pre-configured Obsidian's vault.
+2. Backup your Obsidian vault using Github as private repository.
+3. Define the publishing rules of your Obsidian vault
+4. CI/CD your publishing vault(or the public part of it) using Netlify/Github.io 
+5.  Custom build and deploy your blog (or the public part of it) using Docker container as your web server.
+
+<img width="250px" src="/src/css/images/2419989.jpg" alt="UnderConstruction" style="max-width: 250PX;">
+<a href="http://www.freepik.com">Designed by pikisuperstar / Freepik</a>
 
 
-## How to publish the site using Github pages
-
-
-## Running locally
-
-### Install the modules
-
-```
-npm install
-```
-
-### Compile and run
-
-```
-npm run start
-```
-
-## How to publish the site using Docker
-clone the repository
-### Docker build 
-from the main directory run:
-```
-docker build -t mysite .
-```
-### Docker run
-From **PowerSell** cli run:
-```
-docker run -v ${pwd}:/app --name eleventizy -p 8080:8080 mysite
-```
-
-
-## Principals
-### Notes VS Posts
-#### Notes layouts
-the notes layout is include objects as backlinks and support Obsidian's Wiki-links. the assumption is that the notes' names is uniqe and all of them will get the [parmalink]() as `'<yoursite's base path>/notes/<filename>/'`
-##### Security 
-The notes layout assume all your notes, as default should be **hide** unless you will check it in the frontmeter as "draft: false"
-#### Posts layouts
-The posts layouts links is `[Markdown-link]()`.  (and not [[Wiki-link]]) and the links is relative to the folder which the document located in.
-##### Security 
-The post layout assume all your notes, as default should be **seen** unless you will check it in the frontmeter as "draft: true"
-
-## Where to locate the Obsidian's vault
-### Notes vault
-`/src/notes`
-### Posts vault
-`/src/posts`
-## Menu
+### Table of Contents
+### How to Install and Run the Project
+##### Obsidian
+##### Docker
+##### Netlify
+### How to Use the Project
+### Credits
