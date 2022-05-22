@@ -19,9 +19,10 @@ Using this repository you will be able to:
 4. CI/CD your publishing vault(or the public part of it) using Netlify/Github.io 
 5.  Custom build and deploy your blog (or the public part of it) using Docker container as your web server.
 
-
-<img width="250px" src="/src/css/images/2419989.jpg" alt="UnderConstruction" style="max-width: 250PX;">
-<a href="http://www.freepik.com">Designed by pikisuperstar / Freepik</a>
+> Note: Actually this repository is ready to use but there is some remain work needed, aspecially in the documentation area.
+> <img width="250px" src="/src/css/images/2419989.jpg" alt="UnderConstruction" style="max-width: 250PX;">
+> 
+> <a href="http://www.freepik.com" style="font-size: 0.5em;">Designed by pikisuperstar / Freepik</a>
 
 
 ### Table of Contents
