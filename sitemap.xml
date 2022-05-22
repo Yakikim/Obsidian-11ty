@@ -82,36 +82,6 @@
   </url>
   
   <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/notes/</loc>
-    <lastmod>2022-05-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
-    <lastmod>2022-05-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
-    <lastmod>2022-05-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/running/</loc>
-    <lastmod>2022-05-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/cardiotoxicity/</loc>
-    <lastmod>2022-05-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/helth/</loc>
-    <lastmod>2022-05-22</lastmod>
-  </url>
-  
-  <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/11ty/</loc>
     <lastmod>2022-05-22</lastmod>
   </url>
@@ -158,6 +128,36 @@
   
   <url>
     <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/rest/</loc>
+    <lastmod>2022-05-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/notes/</loc>
+    <lastmod>2022-05-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/another-note/</loc>
+    <lastmod>2022-05-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/second-note/</loc>
+    <lastmod>2022-05-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/running/</loc>
+    <lastmod>2022-05-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/cardiotoxicity/</loc>
+    <lastmod>2022-05-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://&amp;lt;metadata.url&amp;gt;.netlify.app/tags/helth/</loc>
     <lastmod>2022-05-22</lastmod>
   </url>
   
