@@ -1,7 +1,7 @@
 # Obsidian-11ty
 [Demo](https://obsidian-11ty.netlify.app/) site.
 
-This project has created as a platform for publishing selected posts/notes of your [Obsidian]https://obsidian.md/) vault using the front-meter data. It uses the beautiful [Eleventy, as static site generator platform](https://www.11ty.dev/). 
+This project has created as a platform for publishing selected posts/notes of your [Obsidian](https://obsidian.md/) vault using the front-meter data. It uses the beautiful [Eleventy, as static site generator platform](https://www.11ty.dev/). 
 
 The main features that makes the Obsidian so cool and implemented here, are: 
 - Turn Wikilinks `[[links]]` as well as MDLinks `[links](links.md)` into HTML links
