@@ -175,7 +175,7 @@ pre.language-ad-info {
 
 
 div.backlink{
-	background-color: #fbf8ef;
+	background-color: lightyellow;
     padding: 1rem;
     border: 2px solid #e6e6e6;
     border-radius: 12px;
@@ -213,11 +213,11 @@ nav a {
 .note_content{
   margin:10px;
   }
-@media (max-width:700px) {
+@media (max-width:719px) {
 main {
 margin: 10px;
 }}
-@media (min-width: 701px) {
+@media (min-width: 720px) {
 .note_header{ 
  margin:0px;
  }
@@ -892,13 +892,27 @@ opacity: 1;
 .post-list {
   list-style: none;
 }
+.notes-list {
+  list-style: none;
+}
 @media (min-width: 1024px) {
 ul.post-list {
     grid-template-columns: repeat(2,1fr);
 }
+ul.notes-list {
+    grid-template-columns: repeat(3,1fr);
+}
 }
 
 ul.post-list {
+    display: grid;
+    max-height: max-content;
+    justify-items: stretch;
+    gap: 20px;
+    padding: 40px;
+    margin: 40px 0;
+}
+ul.notes-list {
     display: grid;
     max-height: max-content;
     justify-items: stretch;
@@ -915,6 +929,27 @@ ul.post-list {
 }
 
 .post-list__item:last-child {
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+}
+li.note-list__item {
+	background-color: lightyellow;
+    display: flex;
+    overflow: hidden;
+    max-height: max-content;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 2px solid #e1e0e0;
+    border-radius: 10px;
+}.note-list__item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(230, 230, 230, 1);
+}
+
+.note-list__item:last-child {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
 li.post-list__item {
@@ -1432,7 +1467,7 @@ color: white;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
    }
-@media (max-width: 780px) {
+@media (max-width: 719px) {
 .home-animated_text{
 text-align: left; 
 top: 250px;
@@ -1474,7 +1509,7 @@ height: inherit;
     width: 100%;
 	height: 340px;
 }}
-@media (min-width: 768px){
+@media (min-width: 720px){
 .navbar-nav > li > a {
     /*padding-top: 25px;*/
     border-radius: 7px;
@@ -1498,7 +1533,7 @@ height: inherit;
     font-weight: 400;
     font-size: 64px;
 }
-@media (min-width: 768px){
+@media (min-width: 720px){
 .menu-header {
 	padding-top: 20px;
 
@@ -1522,7 +1557,7 @@ height: inherit;
         "section"
         "side";
 }
-@media (min-width: 700px){
+@media (min-width: 720px){
 .md-header-link{
 opacity: 0.35;
     font-size: 0.76em;
@@ -1717,7 +1752,7 @@ opacity: 1;
    
 	z-index: 2;
 }
-@media (min-width:700px){
+@media (min-width:720px){
 .searchResultsBox {
     width: 400px; 
 }

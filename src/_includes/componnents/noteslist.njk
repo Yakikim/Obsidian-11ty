@@ -1,8 +1,8 @@
 
 
-<ul class="post-list">
+<ul class="notes-list">
   {% for notes in noteslist | reverse %}
-    <li class="post-list__item">
+    <li class="note-list__item">
       <div>
         <div class="post-list__meta">
           <time datetime="{{ notes.date | htmlDateString }}">
