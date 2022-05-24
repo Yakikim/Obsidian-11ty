@@ -10,6 +10,7 @@
 
     const resEl = document.getElementById("searchResults");
     const noResultsEl = document.getElementById("noResultsFound");
+
     resEl.innerHTML = "";
     if (results) {
       noResultsEl.style.display = "none";
@@ -18,20 +19,19 @@
         const el = document.createElement("li");
         resEl.appendChild(el);
 
-        const h3 = document.createElement("h3");
-        el.appendChild(h3);
+        const h4 = document.createElement("h4");
+        el.appendChild(h4);
 
         const a = document.createElement("a");
         a.setAttribute("href", id);
         a.textContent = title;
-        h3.appendChild(a);
+        h4.appendChild(a);
 
         const p = document.createElement("p");
         p.textContent = description;
         el.appendChild(p);
       });
     } else {
-		resEl.style.display = "none";
       noResultsEl.style.display = "block";
     }
   };
